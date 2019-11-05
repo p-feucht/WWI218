@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>WebProgrammierung_Test</title>
+    <title>Login Screen</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Clean.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body class="mx-auto">
@@ -30,8 +31,8 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-justify" href="#">Home&nbsp;&nbsp;<i class="fa fa-home"></i></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Auf die Schnelle</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link text-justify" href="index.html">Home&nbsp;&nbsp;<i class="fa fa-home"></i></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Auf die Schnelle</a></li>
                     <li class="nav-item" role="presentation"></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Gut &amp; Günstig</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Foodporn</a></li>
@@ -43,12 +44,19 @@
                             <h6 class="dropdown-header" role="presentation">Header</h6>
                         </div>
                     </li>
-                </ul><span class="navbar-text actions"> <a class="login" href="#">Registration</a><a class="btn btn-light action-button" role="button" href="login-screen.html">Login</a></span></div>
-        </div>
-    </nav><i class="fa fa-search"></i><input type="search">
-    <fieldset></fieldset>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            </div>
+            <fieldset></fieldset>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+            <div id="login">
+                <form method="post">
+                    <h2 class="sr-only">Login Form</h2>
+                    <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+            </div>
 </body>
 
 </html>
