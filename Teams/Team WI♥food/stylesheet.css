@@ -1,0 +1,58 @@
+h1 {
+    border: 1px solid#FF00BF;
+    position: fixed;
+    text-align: center;
+}
+
+div nav {
+    padding: 20px;
+}
+
+
+}
+left {
+    text-align: left;
+    position: absolute;
+    left: 3cm;
+    top: 4cm;
+}
+left header {
+    padding: 10px;
+    font-size: 22px;
+    height: 1cm;
+    align-content: flex-start;
+}
+left section {
+    height: 3cm;
+}
+right {
+    border: solid#000;
+    font-size: 22px;
+    padding: 30px;
+    position: fixed;
+    top: 5cm;
+    right: 0cm;
+}
+right Montag {
+    border: solid#000;
+    padding: 0, 5cm;
+    margin-left: 1cm;
+}
+login {
+    position: fixed;
+    right: 1cm;
+    top: 0cm;
+}
+impressum footer {
+    position: fixed;
+    bottom: 0;
+    height: 0, 5cm;
+    left: 0cm;
+}
+suchfunktion {
+    position: fixed;
+    top: 4cm;
+    right: 15cm;
+    border: 1px solid#000;
+    padding-left: 4cm;
+}
