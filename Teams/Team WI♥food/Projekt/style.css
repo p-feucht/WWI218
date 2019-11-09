@@ -13,10 +13,10 @@ a h1 {
     color: black;
 }
 
-body div {
+search {
     text-align: center;
     top: 1cm;
-    left: 15cm;
+    left: 12cm;
     position: fixed;
     text-decoration: none;
 }
@@ -64,4 +64,11 @@ div input {
     height: 1cm;
     width: 5cm;
     ;
+}
+
+content {
+    border: 4cm;
+    position: initial;
+    top: 4cm;
+    right: 20scm;
 }
