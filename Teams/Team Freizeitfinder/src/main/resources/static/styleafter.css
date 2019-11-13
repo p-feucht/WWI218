@@ -1,51 +1,276 @@
-.wrapper header.header>img {
-    position: absolute;
-    width: 100%;
-    height: 100%
-}
-
-.wrapper {
-    background: #3b393b;
-}
-
-.wrapper header.header .header-top .logo {
-    margin-top: 5px;
-    margin-left: 0px;
-}
-
-.wrapper header.header .header-top .logo h2 a {
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    font-weight: 300;
-    text-decoration: non;
-    color: #fff;
-}
-
-.wrapper header.header .header-top ul.nav.navbar-nav {
-    float: right;
-    margin-top: 15px;
-}
-
-.wrapper header.header .header-top ul.nav.navbar-nav li button {
-    color: #fff(0, 0%, 100%);
-    font-size: 17px;
-    font-weight: 600;
-    font-family: "Open Sans", sans-serif;
-    background: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-}
-
-.wrapper header.header .header-top ul.nav.navbar-nav li a {
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    margin-right: 10px;
-}
-
-.wrapper header.header .header-top ul.nav.navbar-nav li a:hover {
-    color: #87848a;
-    background: transparent;
-}
+    body {
+        background: #fff;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 300;
+    }
+    
+    header {
+        background: rgb(215, 84, 248);
+    }
+    
+    header .container {
+        width: 100%;
+        margin: 0;
+        margin-right: 30px;
+    }
+    
+    .menu {
+        z-index: 1000000;
+        font-weight: bold;
+        font-size: 0.8em;
+        width: 30%;
+        background: #f1f1f1;
+        position: absolute;
+        text-align: center;
+        font-size: 12px;
+        height: 100%;
+    }
+    
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        list-style-image: none;
+    }
+    
+    .menu li {
+        display: block;
+        padding: 15px 0 15px 0;
+        border-bottom: #dddddd 1px solid;
+    }
+    
+    .menu li:hover {
+        display: block;
+        background: #ffffff;
+        padding: 15px 0 15px 0;
+        border-bottom: #dddddd 1px solid;
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        margin: 0px;
+        color: #666;
+    }
+    
+    .menu ul li a:hover {
+        color: #666;
+        text-decoration: none;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .menu a:hover {
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .glyphicon-home {
+        color: white;
+        font-size: 1.5em;
+        margin-top: 5px;
+        margin: 0 auto;
+    }
+    
+    .filters {
+        margin-top: 20%;
+    }
+    
+    .logo {
+        float: left;
+        margin-left: 7%;
+    }
+    
+    .logo h2 a {
+        font-family: 'Dancing Script', cursive;
+        font-size: 44px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        transition: ease-in-out;
+    }
+    
+    .logo h2 a:hover {
+        color: rgb(126, 19, 226)
+    }
+    
+    .nav {
+        float: right;
+        margin-right: 16%;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-left: 70px;
+        padding-top: 25px;
+        position: relative;
+    }
+    
+    nav n {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        text-transform: Uppercase;
+        font-size: 15px;
+    }
+    
+    nav c {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        text-transform: Uppercase;
+        font-size: 15px;
+        float: right;
+    }
+    
+    nav c::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 100%;
+        background-color: rgb(126, 19, 226);
+        position: absolute;
+        top: 0
+    }
+    
+    nav n::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 0;
+        width: 0%;
+        transition: all ease-in 100ms
+    }
+    
+    nav n:hover::before {
+        width: 100%;
+    }
+    
+    .search-box {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #2f3640;
+        height: 60px;
+        border-radius: 40px;
+        padding: 10px;
+    }
+    
+    .search-box:hover>.search-txt {
+        width: 240px;
+        padding: 0 6px;
+    }
+    
+    .search-box:hover>.search-btn {
+        background: white;
+        color: black;
+    }
+    
+    .search-btn {
+        color: #e84118;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .search-btn>i {
+        font-size: 30px;
+    }
+    
+    .search-txt {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+        font-weight: bold;
+    }
+    
+    .neBtn {
+        position: relative;
+        border: none;
+        background: rgb(126, 19, 226);
+        outline: none;
+        color: rgb(255, 255, 255);
+        height: 60px;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 120px;
+        line-height: 41px;
+        width: 200px;
+        top: 50%;
+    }
+    
+    .fa-plus {
+        font-size: 45px;
+        color: #fff;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .categories {
+        background: #bdbfc2;
+    }
+    
+    .z1 {
+        width: 50%;
+        float: left;
+    }
+    
+    input[type="checkbox"] {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        appearance: none;
+        -webkit-appearance: none;
+        background: coral;
+        outline: none;
+        border-radius: 20px;
+        transition: .5s;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, .2)
+    }
+    
+    input:checked[type="checkbox"] {
+        background: rgb(126, 19, 226);
+    }
+    
+    input[type="checkbox"]:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: .5s;
+    }
+    
+    .checklbl {
+        top: 100px
+    }
+    
+    input:checked[type="checkbox"]:before {
+        left: 20px;
+    }
