@@ -14,59 +14,6 @@
         margin-right: 30px;
     }
     
-    .menu {
-        z-index: 1000000;
-        font-weight: bold;
-        font-size: 0.8em;
-        width: 30%;
-        background: #f1f1f1;
-        position: absolute;
-        text-align: center;
-        font-size: 12px;
-        height: 100%;
-    }
-    
-    .menu ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        list-style-image: none;
-    }
-    
-    .menu li {
-        display: block;
-        padding: 15px 0 15px 0;
-        border-bottom: #dddddd 1px solid;
-    }
-    
-    .menu li:hover {
-        display: block;
-        background: #ffffff;
-        padding: 15px 0 15px 0;
-        border-bottom: #dddddd 1px solid;
-    }
-    
-    .menu ul li a {
-        text-decoration: none;
-        margin: 0px;
-        color: #666;
-    }
-    
-    .menu ul li a:hover {
-        color: #666;
-        text-decoration: none;
-    }
-    
-    .menu a {
-        text-decoration: none;
-        color: #666;
-    }
-    
-    .menu a:hover {
-        text-decoration: none;
-        color: #666;
-    }
-    
     .glyphicon-home {
         color: white;
         font-size: 1.5em;
@@ -149,6 +96,59 @@
         width: 100%;
     }
     
+    .menu {
+        z-index: 1000000;
+        font-weight: bold;
+        font-size: 0.8em;
+        width: 30%;
+        background: #f1f1f1;
+        position: fixed;
+        text-align: center;
+        font-size: 12px;
+        height: 100%;
+    }
+    
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        list-style-image: none;
+    }
+    
+    .menu li {
+        display: block;
+        padding: 15px 0 15px 0;
+        border-bottom: #dddddd 1px solid;
+    }
+    
+    .menu li:hover {
+        display: block;
+        background: #ffffff;
+        padding: 15px 0 15px 0;
+        border-bottom: #dddddd 1px solid;
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        margin: 0px;
+        color: #666;
+    }
+    
+    .menu ul li a:hover {
+        color: #666;
+        text-decoration: none;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .menu a:hover {
+        text-decoration: none;
+        color: #666;
+    }
+    
     .search-box {
         position: absolute;
         top: 5%;
@@ -171,6 +171,7 @@
     }
     
     .search-btn {
+        position: relative;
         color: #e84118;
         float: right;
         width: 40px;
@@ -273,4 +274,25 @@
     
     input:checked[type="checkbox"]:before {
         left: 20px;
+    }
+    
+    .resultbox {
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 2%;
+        width: 90%;
+        height: 350px;
+        background: #7c2dfe;
+        box-shadow: 2, 2 black;
+        border-radius: 50px;
+        display: inline-block;
+    }
+    
+    .contentpage {
+        float: right;
+        width: 70%;
+        align-items: center;
+        height: 100%;
+        overflow: auto;
+        white-space: normal;
     }
