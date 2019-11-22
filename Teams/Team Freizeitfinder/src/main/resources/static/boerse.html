@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Open+Sans:400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
     <!-- Place favicon.ico in the root directory -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/moment.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
 
     <link rel="stylesheet" href="styleafter.css">
 
@@ -145,12 +150,6 @@
         <div class="modal fade" id="entryModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Eintrag anlegen</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
                     <div class="modal-body">
                         <form>
                             <div class="entryform">
@@ -172,7 +171,7 @@
                                             <input type="text" class="form-control" id="inputCity" placeholder="Aktivität eingeben..">
                                         </div>
                                         <div class="form-group col-md-2">
-                                            <label for="inputState">Anzahl Personen</label>
+                                            <label for="inputState">Personen</label>
                                             <select id="inputState" class="form-control">
                                                                              <option selected>2</option>
                                                                              <option>2-4</option>
@@ -180,14 +179,28 @@
                                                                              <option>10-20</option>
                                                                          </select>
                                         </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputState">Ungefähre Dauer</label>
-                                            <select id="inputState" class="form-control">
-                                                                             <option>1-2h</option>
-                                                                             <option>2-4h</option>
-                                                                             <option>4-6h</option>
-                                                                             <option>+ 6h</option>
-                                                                         </select>
+
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="datetimepicker3">Von</label>
+                                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" />
+                                                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="datetimepicker3">Bis</label>
+                                            <div class="input-group date" id="datetimepicker4" data-target-input="nearest" style="color: aquamarine;">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" />
+                                                <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -198,6 +211,7 @@
                                             </label>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </form>
@@ -210,13 +224,31 @@
             </div>
         </div>
     </div>
-    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
 </body>
 
 <footer>
     <script src="https://kit.fontawesome.com/a7251fd168.js " crossorigin="anonymous "></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+
+    <script type="text/javascript">
+        $(function() {
+            $('#datetimepicker3').datetimepicker({
+                locale: 'de'
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('#datetimepicker4').datetimepicker({
+                format: 'LT'
+            });
+        });
+    </script>
 </footer>
 
 </html>
