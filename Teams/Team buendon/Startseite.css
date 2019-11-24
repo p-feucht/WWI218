@@ -1,6 +1,6 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     color: #292f36;
     font-family: helvetica;
     line-height: 1.6;
@@ -14,7 +14,7 @@ body {
 
 .header {
     width: 100%;
-    height: 150px;
+    height: 10em;
     display: block;
     background-color: rgb(134, 215, 3);
     position: relative;
@@ -32,38 +32,28 @@ body {
 .logo_container {
     float: left;
     position: absolute;
-    /*  <<<<< HEAD */
     top: 0;
-    height: 150px;
-    /* =======<<<<<<< HEAD top: -1.1rem;
-    left: 50%;
-    font-size: 40px;
-    border-bottom: 1.5px solid;
-    border-top: 1.5px solid;
-    =======top: 0px;
-    left: 35%;
-    font-size: 50px;
-    >>>>>>>3459073309f986c9405321e2ed84c26aec03be03>>>>>>>aed1d14ae24497d45da478ceaac18400297300fc*/
+    height: 10em;
 }
 
 .logo_container img {
     height: auto;
-    width: 150px;
+    width: 10em;
 }
 
 .header_text {
     width: 100%;
-    height: 150px;
+    height: 10em;
     top: 0;
     text-align: center;
     color: white;
 }
 
 .header_text h1 {
-    font-size: 40px;
+    font-size: 2.5em;
     display: inline-block;
-    border-bottom: 1.5px solid;
-    border-top: 1.5px solid;
+    border-bottom: 0.03em solid;
+    border-top: 0.03em solid;
 }
 
 .header_subtext {
@@ -76,7 +66,7 @@ body {
 
 .header_subtext h2 {
     text-transform: uppercase;
-    padding-top: 80px;
+    padding-top: 3.5em;
     font-weight: 100;
 }
 
@@ -97,17 +87,17 @@ div.sticky {
     width: 100%;
     height: 10%;
     background: #292f36;
+    display: inline-block;
 }
 
 .sticky a {
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px;
+    padding: 0.8em;
     text-decoration: none;
-    font-size: 17px;
-    border-radius: 5px;
+    font-size: 1.1em;
+    border-radius: 0.5em;
 }
 
 .sticky a:hover {
@@ -129,19 +119,19 @@ div.sticky {
 }
 
 .sticky .search input[type=text] {
-    width: 150px;
-    border: 2px solid rgb(240, 164, 154);
+    width: 10em;
+    border: 0.2em solid rgb(240, 164, 154);
     border-radius: 0.5em;
-    font-size: 17px;
+    font-size: 1em;
     background-color: white;
-    padding: 2px 2px 2px 2px;
+    padding: 0.1em 0.1em 0.1em 0.1em;
     background-repeat: no-repeat;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     float: right;
-    margin-right: 50px;
-    margin-top: 12px;
+    margin-right: 1em;
     color: #9DBFAF;
+    margin-top: 0.75em;
 }
 
 .sticky .search input[type=text]:focus {
@@ -211,21 +201,37 @@ ul.breadcrumb li a:hover {
 .side {
     width: 21%;
     float: left;
-    background-color: #f1f1f1;
+    background-color: #f1f1f1c2;
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.side h2 {
+    color: white;
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(189, 186, 186);
     padding-left: 2%;
     padding-right: 2%;
-    margin-top: 20px;
+    margin-top: 1em;
+    width: 100%;
+    padding-bottom: 0.1em;
 }
 
-.row .side img {
-    width: 50px;
-    height: auto;
+.orgabutton {
+    background-color: rgb(189, 186, 186);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    padding-bottom: 1em;
+}
+
+.orgabutton img {
+    border-radius: 50%;
 }
 
 .main {
@@ -240,7 +246,27 @@ ul.breadcrumb li a:hover {
     background-color: white;
     padding-left: 2%;
     padding-right: 2%;
-    margin-top: 20px;
+    margin-top: 1em;
+}
+
+figure {
+    text-align: left;
+    margin-left: 0.1em;
+}
+
+.nachrichtenlogo {
+    float: left;
+}
+
+h5 {
+    text-align: left;
+}
+
+img.hilfslogo {
+    float: left;
+    width: 8em;
+    height: 6em;
+    padding-right: 1em;
 }
 
 
@@ -262,33 +288,24 @@ ul.breadcrumb li a:hover {
 
 .inner_footer {
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inner_footer a {
-    display: inline-block;
     font-size: 1.5em;
-    padding-top: 1.25em;
-}
-
-.inner_footer .kontakt {
-    text-decoration: none;
+    padding: 1em;
     color: white;
-    padding-left: 30%;
-    float: left;
-}
-
-.footer img {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    padding-left: 45%;
-}
-
-.inner_footer .impressum {
     text-decoration: none;
-    color: white;
-    padding-right: 30%;
-    float: right;
+}
+
+.inner_footer a:hover {
+    text-decoration: underline;
+}
+
+img {
+    height: 100px;
 }
 
 
