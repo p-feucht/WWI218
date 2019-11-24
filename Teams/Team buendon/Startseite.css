@@ -32,9 +32,17 @@ header h1 {
     color: #fff;
     padding: 0 1rem;
     position: absolute;
+<<<<<<< HEAD
+    top: -1.1rem;
+    left: 50%;
+    font-size: 40px;
+    border-bottom: 1.5px solid;
+    border-top: 1.5px solid;
+=======
     top: 0px;
     left: 35%;
     font-size: 50px;
+>>>>>>> 3459073309f986c9405321e2ed84c26aec03be03
 }
 
 header p {
