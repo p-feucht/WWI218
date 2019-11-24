@@ -1,5 +1,5 @@
 .wrapper header.header {
-    background-image: url("img/header-bg.jpg");
+    background: #888484;
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: 950px;
@@ -34,7 +34,7 @@
     font-size: 17px;
     font-weight: 600;
     font-family: "Open Sans", sans-serif;
-    background: rgb(80, 22, 65);
+    background: #FAB3A9;
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -49,7 +49,7 @@
 }
 
 .wrapper header.header .header-top ul.nav.navbar-nav li a:hover {
-    color: #6a1dad;
+    color: #ED6B86;
     background: transparent;
 }
 
@@ -85,7 +85,7 @@
     width: 65px;
     height: 65px;
     line-height: 65px;
-    background: #b547d2;
+    background: #ED6B86;
     text-align: center;
     border: none;
     border-radius: 33px
@@ -574,7 +574,7 @@
 }
 
 .wrapper section.testimonial .owl-dots .owl-dot.active span::after {
-    background: #e355fd none repeat scroll 0 0;
+    background: #ED6B86 none repeat scroll 0 0;
     border-radius: 5px;
     content: "";
     height: 12px;
