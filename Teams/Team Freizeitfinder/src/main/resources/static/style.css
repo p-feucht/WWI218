@@ -574,7 +574,7 @@
 }
 
 .wrapper section.testimonial .owl-dots .owl-dot.active span::after {
-    background: #e355fd none repeat scroll 0 0;
+    background: #ED6B86 none repeat scroll 0 0;
     border-radius: 5px;
     content: "";
     height: 12px;

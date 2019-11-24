@@ -79,7 +79,7 @@ nav n:hover::before {
 }
 
 .menu {
-    z-index: 1000000;
+    z-index: 0;
     font-weight: bold;
     font-size: 0.8em;
     width: 25%;
@@ -90,41 +90,6 @@ nav n:hover::before {
     height: 100%;
     margin-top: 80px;
     left: 0
-}
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.menu li {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #dddddd 1px solid;
-}
-
-.menu li:hover {
-    display: block;
-    padding: 15px 0 15px 0;
-    border-bottom: #dddddd 1px solid;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    margin: 0px;
-    color: #666;
-}
-
-.menu ul li a:hover {
-    color: #666;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #666;
 }
 
 .menu a:hover {
@@ -198,7 +163,6 @@ nav n:hover::before {
     width: 120px;
     line-height: 45px;
     width: 200px;
-    margin-top: 20px;
 }
 
 .fa-plus {
@@ -281,4 +245,8 @@ input:checked[type="checkbox"]:before {
 
 .modal-content {
     border-radius: 20px;
+}
+
+#ortsearch {
+    width: 50%;
 }
