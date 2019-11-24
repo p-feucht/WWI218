@@ -32,22 +32,18 @@ body {
 .logo_container {
     float: left;
     position: absolute;
-<<<<<<< HEAD
+    /*  <<<<< HEAD */
     top: 0;
     height: 150px;
-=======
-<<<<<<< HEAD
-    top: -1.1rem;
+    /* =======<<<<<<< HEAD top: -1.1rem;
     left: 50%;
     font-size: 40px;
     border-bottom: 1.5px solid;
     border-top: 1.5px solid;
-=======
-    top: 0px;
+    =======top: 0px;
     left: 35%;
     font-size: 50px;
->>>>>>> 3459073309f986c9405321e2ed84c26aec03be03
->>>>>>> aed1d14ae24497d45da478ceaac18400297300fc
+    >>>>>>>3459073309f986c9405321e2ed84c26aec03be03>>>>>>>aed1d14ae24497d45da478ceaac18400297300fc*/
 }
 
 .logo_container img {
@@ -101,7 +97,6 @@ div.sticky {
     width: 100%;
     height: 10%;
     background: #292f36;
-    z-index: 10;
 }
 
 .sticky a {
@@ -262,13 +257,38 @@ ul.breadcrumb li a:hover {
     position: relative;
     background-color: rgb(134, 215, 3);
     width: 100%;
+    top: 0;
+}
+
+.inner_footer {
+    height: 100px;
+}
+
+.inner_footer a {
+    display: inline-block;
+    font-size: 1.5em;
+    padding-top: 1.25em;
+}
+
+.inner_footer .kontakt {
+    text-decoration: none;
+    color: white;
+    padding-left: 30%;
+    float: left;
 }
 
 .footer img {
-    width: 100px;
-    height: auto;
+    height: 100%;
     position: absolute;
+    top: 0;
     padding-left: 45%;
+}
+
+.inner_footer .impressum {
+    text-decoration: none;
+    color: white;
+    padding-right: 30%;
+    float: right;
 }
 
 
