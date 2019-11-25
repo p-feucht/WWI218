@@ -9,46 +9,62 @@ body {
 
 /* main */
 
-header {
-    height: 150px;
-    z-index: 10;
-    position: relative;
-}
-
-.header-banner {
-    background-color: rgb(134, 215, 3);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.header {
     width: 100%;
     height: 150px;
+    display: block;
+    background-color: rgb(134, 215, 3);
+    position: relative;
+    margin: 0;
 }
 
-header h1 {
-    background-color: none;
-    color: #fff;
-    padding: 0 1rem;
+.inner_header {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
     position: absolute;
-    top: -1.1rem;
-    left: 35%;
-    font-size: 50px;
+}
+
+.logo_container {
+    float: left;
+    position: absolute;
+    top: 0;
+    height: 150px;
+}
+
+.logo_container img {
+    height: auto;
+    width: 150px;
+}
+
+.header_text {
+    width: 100%;
+    height: 150px;
+    top: 0;
+    text-align: center;
+    color: white;
+}
+
+.header_text h1 {
+    font-size: 40px;
+    display: inline-block;
     border-bottom: 1.5px solid;
     border-top: 1.5px solid;
 }
 
-header h2 {
-    background-color: none;
-    color: #fff;
-    padding: 0 9rem;
+.header_subtext {
+    width: 100%;
     position: absolute;
-    top: 5.25rem;
-    left: 35%;
-    font-size: 20;
+    text-align: center;
+    color: white;
+    top: 0;
 }
 
-header img {
-    width: 150px;
-    height: auto;
+.header_subtext h2 {
+    text-transform: uppercase;
+    padding-top: 80px;
+    font-weight: 100;
 }
 
 div.sticky {
