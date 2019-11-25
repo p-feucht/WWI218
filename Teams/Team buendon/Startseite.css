@@ -135,7 +135,7 @@ div.sticky {
 }
 
 .sticky .search input[type=text]:focus {
-    width: 300px;
+    width: 20em;
 }
 
 
@@ -304,8 +304,8 @@ img.hilfslogo {
     text-decoration: underline;
 }
 
-img {
-    height: 100px;
+.inner_footer img {
+    height: 100%;
 }
 
 
