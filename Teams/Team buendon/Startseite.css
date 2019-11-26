@@ -187,6 +187,7 @@
                         }
                         
                         .card {
+                            border-radius: 1em;
                             background-color: rgb(189, 186, 186);
                             padding-left: 2%;
                             padding-right: 2%;
@@ -211,6 +212,7 @@
                         }
                         
                         .main {
+                            border-radius: 1em;
                             float: right;
                             width: 71%;
                             background-color: gray;
@@ -219,6 +221,7 @@
                         }
                         
                         .block {
+                            border-radius: 1em;
                             background-color: white;
                             padding-left: 2%;
                             padding-right: 2%;
@@ -272,4 +275,8 @@
                         
                         .inner_footer a:hover {
                             text-decoration: underline;
+                        }
+                        
+                        .inner_footer img {
+                            height: 100%;
                         }
