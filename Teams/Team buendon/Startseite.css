@@ -208,6 +208,8 @@ ul.breadcrumb li a:hover {
 
 .side h2 {
     color: white;
+    font-size: 1.6em;
+    text-decoration: underline;
 }
 
 .card {
@@ -222,7 +224,7 @@ ul.breadcrumb li a:hover {
 .orgabutton {
     background-color: rgb(189, 186, 186);
     width: 100%;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -305,7 +307,7 @@ img.hilfslogo {
 }
 
 img {
-    height: 100px;
+    height: 100%;
 }
 
 
