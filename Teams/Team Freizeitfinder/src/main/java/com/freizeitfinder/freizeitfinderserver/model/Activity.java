@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "activity")
+@Table(name = "generalActivity")
 public class Activity extends BaseModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class Activity extends BaseModel implements Serializable {
     @JoinColumn(name = "activity_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
-    private GeneralActivity activity;
+    private GeneralActivity generalActivity;
 
     @Lob
     @Column(name = "description",
@@ -65,12 +65,12 @@ public class Activity extends BaseModel implements Serializable {
         this.id = id;
     }
 
-    public GeneralActivity getActivity() {
-        return activity;
+    public GeneralActivity getGeneralActivity() {
+        return generalActivity;
     }
 
-    public void setActivity(GeneralActivity activity) {
-        this.activity = activity;
+    public void setGeneralActivity(GeneralActivity generalActivity) {
+        this.generalActivity = generalActivity;
     }
 
     public String getDescription() {
