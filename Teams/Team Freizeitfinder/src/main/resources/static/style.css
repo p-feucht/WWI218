@@ -1010,3 +1010,23 @@
 .wrapper section.footer-icon .owl-dots {
     display: none;
 }
+
+.well {
+    width: 20%;
+    margin-left: 38%;
+}
+
+.pickerButton {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #FAB3A9;
+}
+
+.pickerButton a {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
