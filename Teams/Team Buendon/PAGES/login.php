@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="CSS Dateien/Impressum.css">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="shortcut icon" type="image/png" href="Logo.png">
+  <link rel="shortcut icon" type="image/png" href="Bilder/Logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -14,7 +14,7 @@
   <div class="header">
       <div class="inner_header">
           <div class="logo_container">
-              <img src="Logo.png" alt="Buendon Logo">
+              <img src="Bilder/Logo.png" alt="Buendon Logo">
           </div>
 
           <div class="header_text">
