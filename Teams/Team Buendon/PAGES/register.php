@@ -14,7 +14,7 @@
   <div class="header">
       <div class="inner_header">
           <div class="logo_container">
-              <img src="Logo.png" alt="Buendon Logo">
+              <img src="Bilder/Logo.png" alt="Buendon Logo">
           </div>
 
           <div class="header_text">
@@ -29,7 +29,7 @@
 
 
   <div class="sticky">
-      <a class="house" href="Startseite.html"><i class="fa fa-home"></i></a>
+      <a class="house" href="index.html"><i class="fa fa-home"></i></a>
       <a href="Akutelles.html">Aktuelles</a>
       <a href="Uberuns.html">Über uns</a>
       <a href="SOS Kinderdorf.html">Hilfsorganisationen</a>
@@ -42,7 +42,7 @@
   </div>
 
   <ul class="breadcrumb">
-      <li><a href="Startseite.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="Register.php">Registrierung</a></li>
   </ul>
   <div class="row">
@@ -79,7 +79,7 @@
   <div class="footer">
       <div class="inner_footer">
           <a href="Kontakt.html">Kontakt</a>
-          <img src="Logo.png" alt="Buendon Logo">
+          <img src="Bilder/Logo.png" alt="Buendon Logo">
           <a href="Impressum.html">Impressum</a>
       </div>
   </div>
