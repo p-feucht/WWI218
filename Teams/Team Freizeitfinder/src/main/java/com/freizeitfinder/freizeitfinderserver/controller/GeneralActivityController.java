@@ -3,47 +3,38 @@ package com.freizeitfinder.freizeitfinderserver.controller;
 import com.freizeitfinder.freizeitfinderserver.exception.ResourceNotFoundException;
 import com.freizeitfinder.freizeitfinderserver.model.GeneralActivity;
 import com.freizeitfinder.freizeitfinderserver.repository.GeneralActivityRepository;
+import com.freizeitfinder.freizeitfinderserver.templates.GeneralActivityTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
+@RestController
+@RequestMapping("/api")
 public class GeneralActivityController {
     @Autowired
     GeneralActivityRepository generalActivityRepository;
 
-    @GetMapping("/generalActivities")
+    @GetMapping(path = "/generalActivities")
     public List<GeneralActivity> getAllGeneralActivities() {
         return generalActivityRepository.findAll();
     }
 
-    @PostMapping("/generalActivities")
-    public GeneralActivity createGeneralActivity(@Valid @RequestBody GeneralActivity generalActivities) {
+    @PostMapping(path = "/generalActivities")
+    public GeneralActivity createGeneralActivity(@ModelAttribute GeneralActivity generalActivities) {
         return generalActivityRepository.save(generalActivities);
     }
 
-    @GetMapping("/generalActivities/{id}")
+    @GetMapping(path = "/generalActivities/{id}",  consumes = MediaType.TEXT_PLAIN_VALUE)
     public GeneralActivity getGeneralActivityById(@PathVariable(value = "id") Long generalActivityId) {
         return generalActivityRepository.findById(generalActivityId)
                 .orElseThrow(() -> new ResourceNotFoundException("GeneralActivity", "id", generalActivityId));
     }
 
-    @PutMapping("/generalActivities/{id}")
-    public GeneralActivity updateGeneralActivity(@PathVariable(value = "id") Long generalActivityId,
-                                   @Valid @RequestBody GeneralActivity activityDetails) {
-
-        GeneralActivity generalActivities = generalActivityRepository.findById(generalActivityId)
-                .orElseThrow(() -> new ResourceNotFoundException("GeneralActivity", "id", generalActivityId));
-
-        //TODO: use setters for activities(activityDetails)
-
-        GeneralActivity updatedActivity = generalActivityRepository.save(generalActivities);
-        return updatedActivity;
-    }
-
-    @DeleteMapping("/generalActivities/{id}")
+    @DeleteMapping(path = "/generalActivities/{id}", consumes = MediaType.TEXT_PLAIN_VALUE)
     public ResponseEntity<?> deleteGeneralActivity(@PathVariable(value = "id") Long generalActivityId) {
         GeneralActivity generalActivities = generalActivityRepository.findById(generalActivityId)
                 .orElseThrow(() -> new ResourceNotFoundException("GeneralActivity", "id", generalActivityId));

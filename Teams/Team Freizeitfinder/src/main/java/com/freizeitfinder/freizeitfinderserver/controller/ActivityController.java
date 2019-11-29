@@ -3,6 +3,7 @@ package com.freizeitfinder.freizeitfinderserver.controller;
 import com.freizeitfinder.freizeitfinderserver.exception.ResourceNotFoundException;
 import com.freizeitfinder.freizeitfinderserver.model.Activity;
 import com.freizeitfinder.freizeitfinderserver.repository.ActivityRepository;
+import com.freizeitfinder.freizeitfinderserver.templates.ActivityTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class ActivityController {
     }
 
     @PostMapping("/activities")
-    public Activity createActivity(@Valid @RequestBody Activity activity) {
+    public Activity createActivity(@Valid @ModelAttribute Activity activity) {
         return activityRepository.save(activity);
     }
 
@@ -54,6 +55,17 @@ public class ActivityController {
         activityRepository.delete(activity);
 
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/activities/addAttendee/{id}")
+    public Activity addAttendee(@PathVariable(value = "id")Long activityId){
+        Activity a = activityRepository.findById(activityId)
+                .orElseThrow(()->new ResourceNotFoundException("Activity", "id", activityId));
+        int attendees = a.getAttendeesRightNow();
+        attendees++;
+        a.setAttendeesRightNow(attendees);
+        activityRepository.save(a);
+        return a;
     }
 
 }
