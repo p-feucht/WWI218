@@ -155,11 +155,15 @@ div.sticky {
 /***************************************/
 
 ul.breadcrumb {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3.5em;
+    width: 10%;
+    border-radius: 1em;
     list-style: none;
-    background-color: none;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding-top: 0%;
+    background-color: rgba(240, 164, 154, 0.5);
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
     padding-left: 2%;
 }
 

@@ -146,30 +146,28 @@ div.sticky {
 /***************************************/
 
 
-/***************************************/
-
-
 /* Breadcrumb */
 
+
+/***************************************/
+
 ul.breadcrumb {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3.5em;
+    width: 10%;
+    border-radius: 1em;
     list-style: none;
-    background-color: none;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding-top: 0%;
+    background-color: rgba(240, 164, 154, 0.5);
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
     padding-left: 2%;
 }
-
-
-/* Display list items side by side */
 
 ul.breadcrumb li {
     display: inline;
     font-size: 100%;
 }
-
-
-/* Add a slash symbol (/) before/behind each list item */
 
 ul.breadcrumb li+li:before {
     padding: 8px;
@@ -177,16 +175,10 @@ ul.breadcrumb li+li:before {
     content: "/\00a0";
 }
 
-
-/* Add a color to all links inside the list */
-
 ul.breadcrumb li a {
     color: #292f36;
     text-decoration: none;
 }
-
-
-/* Add a color on mouse-over */
 
 ul.breadcrumb li a:hover {
     color: #292f36;
