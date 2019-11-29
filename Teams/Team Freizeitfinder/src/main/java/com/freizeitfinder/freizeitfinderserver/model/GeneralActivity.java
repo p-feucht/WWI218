@@ -7,7 +7,9 @@ import java.util.Set;
 
 @Entity
 @Table(name = "general_activity")
-public class GeneralActivity extends  BaseModel {
+public class GeneralActivity extends BaseModel {
+
+    //Variables
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -18,8 +20,8 @@ public class GeneralActivity extends  BaseModel {
                     CascadeType.MERGE
             })
     @JoinTable(name = "category_to_activity",
-            joinColumns = { @JoinColumn(name = "general_activity_id") },
-            inverseJoinColumns = { @JoinColumn(name = "category_id") })
+            joinColumns = {@JoinColumn(name = "general_activity_id")},
+            inverseJoinColumns = {@JoinColumn(name = "category_id")})
     private Set<Category> categories = new HashSet<>();
 
     @Column(name = "name",
@@ -55,6 +57,16 @@ public class GeneralActivity extends  BaseModel {
             nullable = false)
     private String street;
 
+    @Column(name = "postcode",
+            columnDefinition = "bigint(6)",
+            nullable = false)
+    private int postcode;
+
+    @Column(name = "city_name",
+            nullable = false)
+    private String cityName;
+
+    //getter/setter
     public long getId() {
         return id;
     }
@@ -125,5 +137,21 @@ public class GeneralActivity extends  BaseModel {
 
     public void setStreet(String street) {
         this.street = street;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public int getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(int postcode) {
+        this.postcode = postcode;
     }
 }
