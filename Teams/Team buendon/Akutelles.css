@@ -204,7 +204,8 @@ ul.breadcrumb li a:hover {
 
 .main {
     background-color: gray;
-    padding-top: 1px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .block {
