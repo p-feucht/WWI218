@@ -147,6 +147,12 @@ body {
     display: block;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .active {
     background-color: rgb(240, 164, 154);
     border-radius: 0.5em;
