@@ -195,9 +195,11 @@ ul.breadcrumb li a:hover {
 }
 
 .main {
-    background-color: gray;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    border-radius: 1em;
+    width: 96%;
+    background-color: rgba(134, 215, 3, 0.6);
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
 .block {
