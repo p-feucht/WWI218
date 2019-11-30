@@ -4,7 +4,6 @@ import com.freizeitfinder.freizeitfinderserver.exception.ResourceNotFoundExcepti
 import com.freizeitfinder.freizeitfinderserver.model.Activity;
 import com.freizeitfinder.freizeitfinderserver.repository.ActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -23,7 +22,7 @@ public class ActivityController {
     }
 
     @PostMapping("/activities")
-    public Activity createActivity(@Valid @RequestBody Activity activity) {
+    public Activity createActivity(@Valid @ModelAttribute Activity activity) {
         return activityRepository.save(activity);
     }
 
@@ -33,27 +32,15 @@ public class ActivityController {
                 .orElseThrow(() -> new ResourceNotFoundException("Activity", "id", activityId));
     }
 
-    @PutMapping("/activities/{id}")
-    public Activity updateActivity(@PathVariable(value = "id") Long activityId,
-                           @Valid @RequestBody Activity activityDetails) {
-
-        Activity activity = activityRepository.findById(activityId)
-                .orElseThrow(() -> new ResourceNotFoundException("Activity", "id", activityId));
-
-        //TODO: use setters for activities(activityDetails)
-
-        Activity updatedActivity = activityRepository.save(activity);
-        return updatedActivity;
-    }
-
-    @DeleteMapping("/activities/{id}")
-    public ResponseEntity<?> deleteActivity(@PathVariable(value = "id") Long activityId) {
-        Activity activity = activityRepository.findById(activityId)
-                .orElseThrow(() -> new ResourceNotFoundException("Activity", "id", activityId));
-
-        activityRepository.delete(activity);
-
-        return ResponseEntity.ok().build();
+    @GetMapping("/activities/addAttendee/{id}")
+    public Activity addAttendee(@PathVariable(value = "id")Long activityId){
+        Activity a = activityRepository.findById(activityId)
+                .orElseThrow(()->new ResourceNotFoundException("Activity", "id", activityId));
+        int attendees = a.getAttendeesRightNow();
+        attendees++;
+        a.setAttendeesRightNow(attendees);
+        activityRepository.save(a);
+        return a;
     }
 
 }
