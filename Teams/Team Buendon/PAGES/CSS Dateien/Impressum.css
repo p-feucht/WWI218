@@ -1,9 +1,12 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     color: #292f36;
     font-family: helvetica;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column
 }
 
 
@@ -79,50 +82,69 @@ body {
 
 /*Sticky-Navbar*/
 
-div.sticky {
-    position: -webkit-sticky;
+.navList {
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
     position: sticky;
     top: 0;
-    overflow: auto;
     width: 100%;
-    height: 10%;
-    background: #292f36;
-    display: inline-block;
 }
 
-.sticky a {
+.navList li {
     float: left;
-    color: #f2f2f2;
-    text-align: center;
+}
+
+.navList a {
+    color: white;
     padding: 0.8em;
     text-decoration: none;
-    font-size: 1.1em;
+    display: block;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.navList a:hover {
+    background-color: rgb(240, 164, 154);
     border-radius: 0.5em;
-}
-
-.sticky a:hover {
-    background: rgb(240, 164, 154);
     color: black;
 }
 
-.sticky a.active {
-    background: rgb(240, 164, 154);
-    color: black;
+.navList a[href="#hilfsorga"] {
+    color: white;
+    background-color: none;
 }
 
-.sticky .color {
+.navList>li {
+    position: relative;
+}
+
+.navList>li>div {
+    visibility: hidden;
+    position: absolute;
+    background-color: #333;
+    transition: .1s;
+    opacity: 0;
+    font-size: 0.9em;
+}
+
+.navList>li:hover>div {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navList .color {
     color: rgb(240, 164, 154);
 }
 
-.sticky a.house {
-    color: white;
-    font-size: 1.6em;
-    padding: 0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
+.active {
+    background-color: rgb(240, 164, 154);
+    border-radius: 0.5em;
 }
 
-.sticky .search input[type=text] {
+.search input[type=text] {
     width: 10em;
     border: 0.2em solid rgb(240, 164, 154);
     border-radius: 0.5em;
@@ -138,7 +160,7 @@ div.sticky {
     margin-top: 0.75em;
 }
 
-.sticky .search input[type=text]:focus {
+.search input[type=text]:focus {
     width: 20em;
 }
 

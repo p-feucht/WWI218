@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     color: #292f36;
     font-family: helvetica;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column
 }
 
 
@@ -82,84 +85,66 @@ body {
 
 /***************************************/
 
-.navbar {
-    overflow: hidden;
+.navList {
     background-color: #333;
-}
-
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 0.5em;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-    border-radius: 0.5em;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    border-radius: 0.5em;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
-.navbar a:hover,
-.dropdown:hover .dropbtn {
+.navList li {
+    float: left;
+}
+
+.navList a {
+    color: white;
+    padding: 0.8em;
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.navList a:hover {
     background-color: rgb(240, 164, 154);
+    border-radius: 0.5em;
     color: black;
 }
 
-.dropdown-content {
-    display: none;
+.navList a[href="#hilfsorga"] {
+    color: white;
+    background-color: none;
+}
+
+.navList>li {
+    position: relative;
+}
+
+.navList>li>div {
+    visibility: hidden;
     position: absolute;
     background-color: #333;
-    min-width: 180px;
-    z-index: 1;
+    transition: .1s;
+    opacity: 0;
+    font-size: 0.9em;
 }
 
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: rgb(240, 164, 154);
-    display: block;
-    text-align: left;
+.navList>li:hover>div {
+    visibility: visible;
+    opacity: 1;
 }
 
-.dropdown-content a:hover {
-    background-color: rgba(240, 164, 154, 0.9);
-    border-radius: 0.5em;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+.navList .color {
+    color: rgb(240, 164, 154);
 }
 
 .active {
     background-color: rgb(240, 164, 154);
     border-radius: 0.5em;
-}
-
-.navbar .color {
-    color: rgb(240, 164, 154);
 }
 
 .search input[type=text] {
@@ -181,6 +166,7 @@ body {
 .search input[type=text]:focus {
     width: 20em;
 }
+
 
 /***************************************/
 
