@@ -22,7 +22,7 @@
           </div>
 
           <div class="header_subtext">
-              <h2>- Impressum -</h2>
+              <h2>- Anmeldung -</h2>
           </div>
       </div>
   </div>
@@ -33,7 +33,7 @@
       <a href="Akutelles.html">Aktuelles</a>
       <a href="Uberuns.html">Über uns</a>
       <a href="SOS Kinderdorf.html">Hilfsorganisationen</a>
-      <a class="color" href="Anmeldung.html">Anmeldung</a>
+      <a class="color" href="register.php">Anmeldung</a>
       <div class="search">
           <form>
               <input type="text" class="searchterm" placeholder="Suche">
