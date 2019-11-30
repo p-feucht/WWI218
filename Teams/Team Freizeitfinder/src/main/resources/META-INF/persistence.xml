@@ -9,6 +9,7 @@
             <property name="toplink.jdbc.URL" value="jdbc:mysql://localhost:3306/ffdb?useSSL=false&amp;serverTimezone=UTC"/>
             <property name="toplink.jdbc.user" value="root"/>
             <property name="toplink.jdbc.password" value="EDPTtrjTVXwGZ3BW"/>
+            <property name="toplink.jdbc.autocommit" value="true"/>
             <property name="show_sql" value="true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
             <property name="hibernate.current_session_context_class" value="thread"/>
@@ -16,6 +17,7 @@
             <property name="hibernate.connection.user" value="root"/>
             <property name="hibernate.connection.password" value="EDPTtrjTVXwGZ3BW"/>
             <property name="hibernate.connection.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.autocommit" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>

@@ -6,12 +6,12 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity
 @Table(name = "activity")
 public class Activity extends BaseModel implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY,
@@ -33,7 +33,7 @@ public class Activity extends BaseModel implements Serializable {
     private String startTime;
 
     @Column(name = "end_time",
-            columnDefinition = "timestamp",
+            columnDefinition = "varchar(30)",
             nullable = false)
     //@Temporal(TemporalType.TIMESTAMP)
     private String endTime;

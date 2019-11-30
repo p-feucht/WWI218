@@ -1,7 +1,6 @@
 package com.freizeitfinder.freizeitfinderserver.model;
 
 import javax.persistence.*;
-import java.sql.Time;
 
 @Entity
 @Table(name = "general_activity")
@@ -9,7 +8,7 @@ public class GeneralActivity extends BaseModel {
 
     //Variables
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "outside",
@@ -42,12 +41,12 @@ public class GeneralActivity extends BaseModel {
     private String name;
 
     @Column(name = "activity_start",
-            columnDefinition = "time",
+            columnDefinition = "varchar(30)",
             nullable = false)
     private String activityStart;
 
     @Column(name = "activity_end",
-            columnDefinition = "time",
+            columnDefinition = "varchar(30)",
             nullable = false)
     private String activityEnd;
 
@@ -57,12 +56,12 @@ public class GeneralActivity extends BaseModel {
     private String description;
 
     @Column(name = "opening_hours_start",
-            columnDefinition = "time")
-    private Time openingHoursStart;
+            columnDefinition = "varchar(30)")
+    private String openingHoursStart;
 
     @Column(name = "opening_hours_end",
-            columnDefinition = "time")
-    private Time openingHoursEnd;
+            columnDefinition = "varchar(30)")
+    private String openingHoursEnd;
 
     @Column(name = "street",
             columnDefinition = "varchar(50)",
@@ -123,19 +122,19 @@ public class GeneralActivity extends BaseModel {
         this.description = description;
     }
 
-    public Time getOpeningHoursStart() {
+    public String getOpeningHoursStart() {
         return openingHoursStart;
     }
 
-    public void setOpeningHoursStart(Time openingHoursStart) {
+    public void setOpeningHoursStart(String openingHoursStart) {
         this.openingHoursStart = openingHoursStart;
     }
 
-    public Time getOpeningHoursEnd() {
+    public String getOpeningHoursEnd() {
         return openingHoursEnd;
     }
 
-    public void setOpeningHoursEnd(Time openingHoursEnd) {
+    public void setOpeningHoursEnd(String openingHoursEnd) {
         this.openingHoursEnd = openingHoursEnd;
     }
 
