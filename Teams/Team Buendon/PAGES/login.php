@@ -22,7 +22,7 @@
           </div>
 
           <div class="header_subtext">
-              <h2>- Impressum -</h2>
+              <h2>- Anmeldung -</h2>
           </div>
       </div>
   </div>
@@ -44,7 +44,7 @@
             </div>
         </li>
         <li>
-            <a class="active" class="color" href="Anmeldung.html">Anmeldung</a>
+            <a class="active" class="color" href="register.php">Anmeldung</a>
         </li>
         <div class="search">
             <form>
