@@ -2,8 +2,6 @@ package com.freizeitfinder.freizeitfinderserver.model;
 
 import javax.persistence.*;
 import java.sql.Time;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "general_activity")
@@ -14,15 +12,29 @@ public class GeneralActivity extends BaseModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            })
-    @JoinTable(name = "category_to_activity",
-            joinColumns = {@JoinColumn(name = "general_activity_id")},
-            inverseJoinColumns = {@JoinColumn(name = "category_id")})
-    private Set<Category> categories = new HashSet<>();
+    @Column(name = "outside",
+    columnDefinition = "int(1)")
+    private int outside;
+
+    @Column(name = "inside",
+            columnDefinition = "int(1)")
+    private int inside;
+
+    @Column(name = "alcohol",
+            columnDefinition = "int(1)")
+    private int alcohol;
+
+    @Column(name = "with_others",
+            columnDefinition = "int(1)")
+    private int societal;
+
+    @Column(name = "sport",
+            columnDefinition = "int(1)")
+    private int sport;
+
+    @Column(name = "game",
+            columnDefinition = "int(1)")
+    private int game;
 
     @Column(name = "name",
             columnDefinition = "varchar(50)",
@@ -32,12 +44,12 @@ public class GeneralActivity extends BaseModel {
     @Column(name = "activity_start",
             columnDefinition = "time",
             nullable = false)
-    private Time activityStart;
+    private String activityStart;
 
     @Column(name = "activity_end",
             columnDefinition = "time",
             nullable = false)
-    private Time activityEnd;
+    private String activityEnd;
 
     @Lob
     @Column(name = "description",
@@ -66,6 +78,9 @@ public class GeneralActivity extends BaseModel {
             nullable = false)
     private String cityName;
 
+    public GeneralActivity() {
+    }
+
     //getter/setter
     public long getId() {
         return id;
@@ -75,13 +90,6 @@ public class GeneralActivity extends BaseModel {
         this.id = id;
     }
 
-    public Set<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
-    }
 
     public String getName() {
         return name;
@@ -91,19 +99,19 @@ public class GeneralActivity extends BaseModel {
         this.name = name;
     }
 
-    public Time getActivityStart() {
+    public String getActivityStart() {
         return activityStart;
     }
 
-    public void setActivityStart(Time activityStart) {
+    public void setActivityStart(String activityStart) {
         this.activityStart = activityStart;
     }
 
-    public Time getActivityEnd() {
+    public String getActivityEnd() {
         return activityEnd;
     }
 
-    public void setActivityEnd(Time activityEnd) {
+    public void setActivityEnd(String activityEnd) {
         this.activityEnd = activityEnd;
     }
 
@@ -153,5 +161,53 @@ public class GeneralActivity extends BaseModel {
 
     public void setPostcode(int postcode) {
         this.postcode = postcode;
+    }
+
+    public int getGame() {
+        return game;
+    }
+
+    public void setGame(int game) {
+        this.game = game;
+    }
+
+    public int getSport() {
+        return sport;
+    }
+
+    public void setSport(int sport) {
+        this.sport = sport;
+    }
+
+    public int getSocietal() {
+        return societal;
+    }
+
+    public void setSocietal(int societal) {
+        this.societal = societal;
+    }
+
+    public int getAlcohol() {
+        return alcohol;
+    }
+
+    public void setAlcohol(int alcohol) {
+        this.alcohol = alcohol;
+    }
+
+    public int getInside() {
+        return inside;
+    }
+
+    public void setInside(int inside) {
+        this.inside = inside;
+    }
+
+    public int getOutside() {
+        return outside;
+    }
+
+    public void setOutside(int outside) {
+        this.outside = outside;
     }
 }

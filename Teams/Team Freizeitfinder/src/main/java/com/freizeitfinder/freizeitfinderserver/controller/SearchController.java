@@ -1,19 +1,22 @@
 package com.freizeitfinder.freizeitfinderserver.controller;
 
-import com.freizeitfinder.freizeitfinderserver.Helper;
 import com.freizeitfinder.freizeitfinderserver.model.Activity;
-import com.freizeitfinder.freizeitfinderserver.model.Category;
+import com.freizeitfinder.freizeitfinderserver.model.GeneralActivity;
 import com.freizeitfinder.freizeitfinderserver.repository.ActivityRepository;
 import com.freizeitfinder.freizeitfinderserver.repository.GeneralActivityRepository;
+import com.freizeitfinder.freizeitfinderserver.templates.ActivitySearchTemplate;
+import com.freizeitfinder.freizeitfinderserver.templates.GeneralActivitySearchTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashSet;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/api/search")
@@ -25,48 +28,73 @@ public class SearchController {
     @Autowired
     ActivityRepository activityRepository;
 
-    @GetMapping("/activity/{line}&{categories}&{ort}&{timeVon}&{timeBis}")
-    public Set<Activity> getActivitiesBySearchCriteria(@PathVariable(value = "line") String line,
-                                                       @PathVariable(value = "categories")String categories,
-                                                       @PathVariable(value = "ort") String ort,
-                                                       @PathVariable(value = "timeVon") String timeVon,
-                                                       @PathVariable(value = "timeBis") String timeBis){
-        List<Activity> activities = activityRepository.findAll();
-        Set<Activity> toReturn = new HashSet<>();
+    @PostMapping("/generalActivity")
+    public List<GeneralActivity>getGeneralActivityListBySearchCriteria(@ModelAttribute GeneralActivitySearchTemplate searchTemplate){
+        System.out.println(searchTemplate.isOutside());
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("agisdb");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        String query = "select g.* from activity a, general_activity g " +
+                "where a.activity_id = g.id " +
+                "and (g.alcohol = :alcohol " +
+                "or g.inside = :inside " +
+                "or g.game = :game " +
+                "or g.outside = :outside " +
+                "or g.inside = :inside " +
+                "or g.sport = :sport " +
+                "or g.name like('%'||:string||'%') " +
+                "or g.description like ('%'||:string||'%') " +
+                "or a.description like ('%'||:string||'%'))" +
+                "or a.end_time = (:endTime) " +
+                "or a.start_time = (:startTime) " +
+                "or g.city_name = ('%'||:place||'%')";
+        Query q = entityManager.createNativeQuery(query)
+                .setParameter("alcohol", searchTemplate.isAlcohol())
+                .setParameter("inside", searchTemplate.isInside())
+                .setParameter("game", searchTemplate.isGames())
+                .setParameter("outside", searchTemplate.isOutside())
+                .setParameter("inside",searchTemplate.isInside())
+                .setParameter("sport", searchTemplate.isSport())
+                .setParameter("string", searchTemplate.getSearchString())
+                .setParameter("endTime", searchTemplate.getTimeEnd())
+                .setParameter("startTime", searchTemplate.getTimeStart())
+                .setParameter("place", searchTemplate.getPlace());
+        List<GeneralActivity> activities = q.getResultList();
 
-        for (Activity activity : activities) {
-            if(!("null".equalsIgnoreCase(line)||line.isEmpty())){
-                if (activity.getDescription().contains(line)||
-                        activity.getGeneralActivity().getDescription().contains(line)||
-                        activity.getGeneralActivity().getName().contains(line)){
-                    toReturn.add(activity);
-                }
-            }
-            if (!("null".equalsIgnoreCase(categories)||categories.isEmpty())){
-                loop:
-                for (Category category:activity.getGeneralActivity().getCategories()) {
-                    for (String extractedCategory :
-                            Helper.extractCategories(categories)) {
-                        if(category.getName_category().equalsIgnoreCase(extractedCategory)){
-                            toReturn.add(activity);
-                            break loop;
-                        }
-                    }
-                }
+        return activities;
+    }
 
-            }
-            if (!("null".equalsIgnoreCase(ort)||ort.isEmpty())){
-                if(activity.getGeneralActivity().getCityName().contains(ort)){
-                    toReturn.add(activity);
-                }
-            }
-            if(!("null".equalsIgnoreCase(timeBis)||timeBis.isEmpty())){
+    @PostMapping("/activity")
+    public List<Activity>getActivityListBySearchCriteria(@ModelAttribute ActivitySearchTemplate searchTemplate){
+        System.out.println(searchTemplate.isOutside());
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("agisdb");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        String query = "select a.* from activity a, general_activity g " +
+                "where a.activity_id = g.id " +
+                "and (g.alcohol = :alcohol " +
+                "or g.inside = :inside " +
+                "or g.game = :game " +
+                "or g.outside = :outside " +
+                "or g.inside = :inside " +
+                "or g.sport = :sport " +
+                "or g.name like('%'||:string||'%') " +
+                "or g.description like ('%'||:string||'%') " +
+                "or a.description like ('%'||:string||'%'))" +
+                "or a.end_time = (:endTime) " +
+                "or a.start_time = (:startTime) " +
+                "or g.city_name = ('%'||:place||'%')";
+        Query q = entityManager.createNativeQuery(query)
+                .setParameter("alcohol", searchTemplate.isAlcohol())
+                .setParameter("inside", searchTemplate.isInside())
+                .setParameter("game", searchTemplate.isGames())
+                .setParameter("outside", searchTemplate.isOutside())
+                .setParameter("inside",searchTemplate.isInside())
+                .setParameter("sport", searchTemplate.isSport())
+                .setParameter("string", searchTemplate.getSearchString())
+                .setParameter("endTime", searchTemplate.getTimeEnd())
+                .setParameter("startTime", searchTemplate.getTimeStart())
+                .setParameter("place", searchTemplate.getPlace());
+        List<Activity> activities = q.getResultList();
 
-            }
-            if (!("null".equalsIgnoreCase(timeVon)||timeVon.isEmpty())){
-
-            }
-        }
-        return toReturn;
+        return activities;
     }
 }
