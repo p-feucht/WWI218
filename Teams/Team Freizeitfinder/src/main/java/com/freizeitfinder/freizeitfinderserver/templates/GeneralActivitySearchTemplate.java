@@ -9,8 +9,6 @@ public class GeneralActivitySearchTemplate {
     private int alcohol;
     private int games;
     private String place;
-    private String timeStart;
-    private String timeEnd;
 
     public String getSearchString() {
         return searchString;
@@ -75,22 +73,4 @@ public class GeneralActivitySearchTemplate {
     public void setPlace(String place) {
         this.place = place;
     }
-
-    public String getTimeStart() {
-        return timeStart;
-    }
-
-    public void setTimeStart(String timeStart) {
-        this.timeStart = timeStart;
-    }
-
-    public String getTimeEnd() {
-        return timeEnd;
-    }
-
-    public void setTimeEnd(String timeEnd) {
-        this.timeEnd = timeEnd;
-    }
-
-
 }

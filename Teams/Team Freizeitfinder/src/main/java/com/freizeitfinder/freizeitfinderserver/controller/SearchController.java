@@ -33,34 +33,26 @@ public class SearchController {
         System.out.println(searchTemplate.isOutside());
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("agisdb");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        String query = "select g.* from activity a, general_activity g " +
-                "where a.activity_id = g.id " +
-                "and (g.alcohol = :alcohol " +
-                "or g.inside = :inside " +
-                "or g.game = :game " +
-                "or g.outside = :outside " +
-                "or g.inside = :inside " +
-                "or g.sport = :sport " +
-                "or g.name like('%'||:string||'%') " +
-                "or g.description like ('%'||:string||'%') " +
-                "or a.description like ('%'||:string||'%'))" +
-                "or a.end_time = (:endTime) " +
-                "or a.start_time = (:startTime) " +
-                "or g.city_name = ('%'||:place||'%')";
+        String query = "select * from general_activity " +
+                "where name like ('%'||:string||'%') " +
+                "or description like ('%'||:string||'%') " +
+                "or city_name like ('%'||:place||'%') " +
+                "or alcohol = :alcohol " +
+                "or inside = :inside " +
+                "or game = :game " +
+                "or outside = :outside " +
+                "or sport = :sport " +
+                "or with_others = :societal";
         Query q = entityManager.createNativeQuery(query)
                 .setParameter("alcohol", searchTemplate.isAlcohol())
-                .setParameter("inside", searchTemplate.isInside())
+                .setParameter("societal", searchTemplate.isSocietal())
                 .setParameter("game", searchTemplate.isGames())
                 .setParameter("outside", searchTemplate.isOutside())
                 .setParameter("inside",searchTemplate.isInside())
                 .setParameter("sport", searchTemplate.isSport())
                 .setParameter("string", searchTemplate.getSearchString())
-                .setParameter("endTime", searchTemplate.getTimeEnd())
-                .setParameter("startTime", searchTemplate.getTimeStart())
                 .setParameter("place", searchTemplate.getPlace());
-        List<GeneralActivity> activities = q.getResultList();
-
-        return activities;
+        return (List<GeneralActivity>) q.getResultList();
     }
 
     @PostMapping("/activity")
@@ -71,7 +63,7 @@ public class SearchController {
         String query = "select a.* from activity a, general_activity g " +
                 "where a.activity_id = g.id " +
                 "and (g.alcohol = :alcohol " +
-                "or g.inside = :inside " +
+                "or g.with_others = :societal " +
                 "or g.game = :game " +
                 "or g.outside = :outside " +
                 "or g.inside = :inside " +
@@ -84,7 +76,7 @@ public class SearchController {
                 "or g.city_name = ('%'||:place||'%')";
         Query q = entityManager.createNativeQuery(query)
                 .setParameter("alcohol", searchTemplate.isAlcohol())
-                .setParameter("inside", searchTemplate.isInside())
+                .setParameter("societal", searchTemplate.isSocietal())
                 .setParameter("game", searchTemplate.isGames())
                 .setParameter("outside", searchTemplate.isOutside())
                 .setParameter("inside",searchTemplate.isInside())
@@ -93,8 +85,6 @@ public class SearchController {
                 .setParameter("endTime", searchTemplate.getTimeEnd())
                 .setParameter("startTime", searchTemplate.getTimeStart())
                 .setParameter("place", searchTemplate.getPlace());
-        List<Activity> activities = q.getResultList();
-
-        return activities;
+        return (List<Activity>) q.getResultList();
     }
 }
