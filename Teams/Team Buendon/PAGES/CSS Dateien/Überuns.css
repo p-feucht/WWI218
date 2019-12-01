@@ -276,6 +276,31 @@ ul.breadcrumb li a:hover {
     text-align: center;
 }
 
+.block45 {
+    margin-left: 15em;
+    margin-right: 15em;
+    margin-top: 0em;
+    text-align: center;
+}
+
+.block45 a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: rgb(240, 164, 154);
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+.block45 a:hover {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: rgb(240, 164, 154);
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
 .block5 {
     border-radius: 0;
     background-color: white;
