@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     color: #292f36;
     font-family: helvetica;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column
 }
 
 
@@ -82,33 +85,66 @@ body {
 
 /***************************************/
 
-.navbar {
-    overflow: hidden;
+.navList {
     background-color: #333;
-    position: -webkit-sticky;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
     position: sticky;
     top: 0;
-    overflow: auto;
     width: 100%;
-    height: 10%;
+}
+
+.navList li {
+    float: left;
+}
+
+.navList a {
+    color: white;
+    padding: 0.8em;
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.navList a:hover {
+    background-color: rgb(240, 164, 154);
+    border-radius: 0.5em;
+    color: black;
+}
+
+.navList a[href="#hilfsorga"] {
+    color: white;
+    background-color: none;
+}
+
+.navList>li {
+    position: relative;
+}
+
+.navList>li>div {
+    visibility: hidden;
+    position: absolute;
+    background-color: #333;
+    transition: .1s;
+    opacity: 0;
+    font-size: 0.9em;
+}
+
+.navList>li:hover>div {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navList .color {
+    color: rgb(240, 164, 154);
 }
 
 .active {
     background-color: rgb(240, 164, 154);
     border-radius: 0.5em;
-}
-
-.navbar .color {
-    color: rgb(240, 164, 154);
-}
-
-.navbar a {
-    float: left;
-    font-size: 1.1em;
-    color: white;
-    text-align: center;
-    padding: 0.8em;
-    text-decoration: none;
 }
 
 .search input[type=text] {
@@ -129,54 +165,6 @@ body {
 
 .search input[type=text]:focus {
     width: 20em;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 1.1em;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 1em;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: rgb(240, 164, 154);
-    border-radius: 0.5em;
-    color: black;
-}
-
-.dropdown-content {
-    position: absolute;
-    display: none;
-    background-color: white;
-    border-radius: 1em;
-}
-
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: rgb(240, 164, 154);
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(240, 164, 154, 0.9);
-    border-radius: 1em;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 
@@ -247,6 +235,7 @@ ul.breadcrumb li a:hover {
     background-color: rgba(240, 164, 154, 0.6);
     padding-left: 2%;
     padding-right: 2%;
+    padding-bottom: 2%;
 }
 
 .side h2 {
