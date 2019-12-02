@@ -10,6 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface ActivityRepository extends JpaRepository<Activity, Long> {
-    Page<Activity> findByActivityId(Long activityId, Pageable pageable);
-    Optional<Activity> findByIdAndActivityId(Long id, Long activityId);
+    Page<Activity> findByGeneralActivityId(Long activityId, Pageable pageable);
+    Optional<Activity> findByIdAndGeneralActivityId(Long id, Long activityId);
 }

@@ -6,13 +6,12 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity
-@Table(name = "generalActivity")
+@Table(name = "activity")
 public class Activity extends BaseModel implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY,
@@ -28,16 +27,16 @@ public class Activity extends BaseModel implements Serializable {
     private String description;
 
     @Column(name = "start_time",
-            columnDefinition = "timestamp",
+            columnDefinition = "varchar(30)",
             nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date startTime;
+    //@Temporal(TemporalType.TIMESTAMP)
+    private String startTime;
 
     @Column(name = "end_time",
-            columnDefinition = "timestamp",
+            columnDefinition = "varchar(30)",
             nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date endTime;
+    //@Temporal(TemporalType.TIMESTAMP)
+    private String endTime;
 
     @Column(name = "duration",
             columnDefinition = "decimal(2)",
@@ -56,6 +55,10 @@ public class Activity extends BaseModel implements Serializable {
     @Column(name = "tel_number",
             columnDefinition = "bigint(20)")
     private long telNumber;
+
+    @Column(name = "e_mail",
+            columnDefinition = "varchar(50)")
+    private String eMailAdress;
 
     public long getId() {
         return id;
@@ -81,19 +84,19 @@ public class Activity extends BaseModel implements Serializable {
         this.description = description;
     }
 
-    public Date getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 
@@ -137,7 +140,5 @@ public class Activity extends BaseModel implements Serializable {
         this.eMailAdress = eMailAdress;
     }
 
-    @Column(name = "e_mail",
-            columnDefinition = "varchar(50)")
-    private String eMailAdress;
+
 }
