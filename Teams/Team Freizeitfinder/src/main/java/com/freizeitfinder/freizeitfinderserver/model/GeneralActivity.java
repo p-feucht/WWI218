@@ -41,8 +41,7 @@ public class GeneralActivity extends BaseModel {
     private String name;
 
     @Column(name = "activity_start",
-            columnDefinition = "varchar(30)",
-            nullable = false)
+            columnDefinition = "varchar(30)")
     private String activityStart;
 
     @Column(name = "activity_end",

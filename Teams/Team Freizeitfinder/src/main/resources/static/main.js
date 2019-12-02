@@ -2,7 +2,7 @@ $(function () {
 
     let $email = $('#inputEmail4');
     let $text = $('#Textarea1');
-    let $city = $('#inputCity');
+    let $activity = $('#activity');
     let $many = $('#inputState');
     let $timevon = $('#datetimepicker3');
     let $timebis = $('#datetimepicker4');
@@ -10,9 +10,11 @@ $(function () {
     $('#submitEntry').on('click', function () {
 
         let activity = {
+            activity_id: $activity.val(),
             e_mail: $email.val(),
             description: $text.val(),
-            end_time: $timebis.val()
+            end_time: $timebis.val(),
+            start_time: $timevon.val()
         };
         console.log(activity);
         $.ajax({

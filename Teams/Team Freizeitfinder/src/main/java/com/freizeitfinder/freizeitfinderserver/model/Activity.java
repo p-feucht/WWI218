@@ -37,7 +37,7 @@ public class Activity extends BaseModel implements Serializable {
             nullable = false)
     //@Temporal(TemporalType.TIMESTAMP)
     private String endTime;
-
+/*
     @Column(name = "duration",
             columnDefinition = "decimal(2)",
             nullable = false)
@@ -55,7 +55,7 @@ public class Activity extends BaseModel implements Serializable {
     @Column(name = "tel_number",
             columnDefinition = "bigint(20)")
     private long telNumber;
-
+*/
     @Column(name = "e_mail",
             columnDefinition = "varchar(50)")
     private String eMailAdress;
@@ -99,7 +99,7 @@ public class Activity extends BaseModel implements Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
-
+/*
     public int getDuration() {
         return duration;
     }
@@ -131,7 +131,7 @@ public class Activity extends BaseModel implements Serializable {
     public void setTelNumber(long telNumber) {
         this.telNumber = telNumber;
     }
-
+*/
     public String geteMailAdress() {
         return eMailAdress;
     }
