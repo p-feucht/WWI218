@@ -12,6 +12,7 @@
     <!-- Place favicon.ico in the root directory -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/moment.min.js"></script>
+    <script src="main.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
@@ -172,7 +173,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <form>
+                        <form id="entryForm">
                             <div class="entryform">
                                 <div class="formitems">
                                     <div class="form-row">
@@ -182,8 +183,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Beschreiben</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Stellen Sie sich vor und beschreiben was Sie vorhaben.."></textarea>
+                                        <label for="Textarea1">Beschreiben</label>
+                                        <textarea class="form-control" id="Textarea1" rows="3" placeholder="Stellen Sie sich vor und beschreiben was Sie vorhaben.."></textarea>
                                     </div>
 
                                     <div class="form-row">
@@ -234,7 +235,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" style="background: #ED6B86; border:none ">Erstellen</button>
+                                        <button type="submit" class="btn btn-primary" id="submitEntry"  style="background: #ED6B86; border:none ">Erstellen</button>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +255,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.onload = function(){
 
+        }
+
+    </script>
     <script type="text/javascript">
         $(function() {
             $('#datetimepicker3').datetimepicker({
@@ -290,7 +297,7 @@
         }
     </script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMs4-VhZ0I_kg-bt8_VjO5YB1-4kCD5yQ&libraries=places&callback=activatePlacesSearch"></script>
-    </script>
+
 </footer>
 
 </html>
