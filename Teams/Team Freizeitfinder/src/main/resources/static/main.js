@@ -1,29 +1,25 @@
-$(function () {
+$(document).ready(function () {
 
-    let $email = $('#inputEmail4');
-    let $text = $('#Textarea1');
-    let $activity = $('#activity');
-    let $many = $('#inputState');
-    let $timevon = $('#datetimepicker3');
-    let $timebis = $('#datetimepicker4');
+    const form ={
+        description : document.getElementById('Textarea1'),
+        generalActivity: document.getElementById('activity'),
+        endTime: document.getElementById('datetill'),
+        startTime: document.getElementById('datefrom'),
+        eMailAdress: document.getElementById('inputEmail4'),
+        submit: document.getElementById('submitEntry')
+    };
+    form.submit.addEventListener('click', () => {
+        const request = new XMLHttpRequest();
 
-    $('#submitEntry').on('click', function () {
+        request.onload = () => {
+            console.log(request.responseText);
+        }
 
-        let activity = {
-            activity_id: $activity.val(),
-            e_mail: $email.val(),
-            description: $text.val(),
-            end_time: $timebis.val(),
-            start_time: $timevon.val()
-        };
-        console.log(activity);
-        $.ajax({
-            type: 'POST',
-            url: '/api/activities',
-            data: JSON.stringify(activity),
-            success: function(){
-                write('succes');
-            }
-        });
+        const requestData = `description=${form.description.value}&generalActivity=${form.generalActivity.value}&endTime=${form.endTime.value}&startTime=${form.startTime.value}&eMailAdress=${form.eMailAdress.value}`
+        request.open('post', '/api/activities');
+        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        request.send(requestData);
     });
+
+
 });
