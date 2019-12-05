@@ -217,22 +217,67 @@ ul.breadcrumb li a:hover {
 }
 
 .main {
-    border-radius: 1em;
-    width: 96%;
-    background-color: gray;
-    padding-right: 2%;
-    padding-left: 2%;
+    background-color: white;
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
-.block {
+.block1 {
     border-radius: 1em;
-    background-color: white;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
+    background-color: rgba(255, 236, 1, 0.2);
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
 }
+
+.block2 {
+    border-radius: 1em;
+    background-color: rgba(1, 86, 57, 0.2);
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+}
+
+.block3 {
+    border-radius: 1em;
+    background-color: rgba(0, 114, 206, 0.2);
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+}
+
+.block4 {
+    border-radius: 1em;
+    background-color: rgba(4, 180, 28, 0.2);
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+}
+
+
+/*#84bb55; Sos-Kinderdorf Farbe*/
 
 
 /***************************************/
