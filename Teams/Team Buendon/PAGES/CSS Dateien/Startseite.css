@@ -331,10 +331,10 @@
                                     }
                                     
                                     .block2 {
-                                        border-radius: 1em;
-                                        margin-left: 400px;
-                                        margin-right: 400px;
-                                        margin-top: 60px;
+                                        border-radius: 0.5em;
+                                        margin-left: 1em;
+                                        margin-right: 1em;
+                                        margin-top: 1em;
                                         text-align: center;
                                         background-color: white;
                                         height: fit-content;
