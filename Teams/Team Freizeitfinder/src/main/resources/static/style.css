@@ -886,7 +886,7 @@
 .wrapper section.contact-area .contact-form input:focus,
 .wrapper section.contact-area .contact-form input:focus,
 .wrapper section.contact-area .contact-form textarea:focus {
-    color: #e355fd;
+    color:  #888484;
     border-bottom: 1px solid #e355fd;
 }
 
@@ -916,7 +916,7 @@
     padding: 15px 45px;
     font-size: 18px;
     color: #fff;
-    background: #e355fd;
+    background: #888484;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
     border: none;
@@ -933,7 +933,7 @@
 }
 
 .wrapper section.contact-area .contact-part h4 i {
-    color: #e355fd;
+    color: #888484;
     width: 65px;
     text-align: center;
     font-size: 29px
@@ -954,7 +954,7 @@
 }
 
 .wrapper footer.footer {
-    background: #e355fd;
+    background: #888484;
     height: 220px;
 }
 
