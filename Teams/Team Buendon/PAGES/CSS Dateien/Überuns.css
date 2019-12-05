@@ -226,7 +226,7 @@ ul.breadcrumb li a:hover {
 }
 
 .main {
-    background-color: gray;
+    background-color: white;
     padding-top: 1em;
     padding-bottom: 1em;
 }
@@ -263,10 +263,12 @@ ul.breadcrumb li a:hover {
     color: white;
     margin-left: 15em;
     margin-right: 15em;
-    margin-top: 0em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     text-align: center;
     padding-bottom: 1em;
     padding-top: 1em;
+    border-radius: 1em;
 }
 
 .block4 {
