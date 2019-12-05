@@ -225,8 +225,9 @@ ul.breadcrumb li a:hover {
 }
 
 .block1 {
-    border-radius: 1em;
-    background-color: rgba(255, 236, 1, 0.2);
+    border: 0.2em solid rgba(255, 236, 1, 0.5);
+    border-radius: 2em;
+    background-color: white;
     margin-left: 2em;
     margin-right: 2em;
     margin-top: 1em;

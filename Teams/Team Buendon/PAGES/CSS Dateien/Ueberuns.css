@@ -283,8 +283,9 @@ ul.breadcrumb li a:hover {
 .block45 {
     margin-left: 15em;
     margin-right: 15em;
-    margin-top: 0em;
+    margin-top: 1em;
     text-align: center;
+    padding-top: 1em;
 }
 
 .block45 a {
@@ -292,8 +293,8 @@ ul.breadcrumb li a:hover {
     text-decoration: none;
     font-size: 1.5em;
     background-color: rgb(240, 164, 154);
-    border-radius: 0.5em;
-    padding: 0.2em;
+    border-radius: 10em;
+    padding: 0.7em;
 }
 
 .block45 a:hover {
@@ -301,8 +302,8 @@ ul.breadcrumb li a:hover {
     text-decoration: none;
     font-size: 1.5em;
     background-color: rgb(240, 164, 154);
-    border-radius: 0.5em;
-    padding: 0.2em;
+    border-radius: 10em;
+    padding: 0.7em;
 }
 
 .block5 {
