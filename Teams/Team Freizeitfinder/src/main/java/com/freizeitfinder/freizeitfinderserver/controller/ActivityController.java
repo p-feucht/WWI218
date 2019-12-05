@@ -31,9 +31,10 @@ public class ActivityController {
         return activityRepository.findById(activityId)
                 .orElseThrow(() -> new ResourceNotFoundException("Activity", "id", activityId));
     }
-/*
+
     @GetMapping("/activities/addAttendee/{id}")
     public Activity addAttendee(@PathVariable(value = "id")Long activityId){
+
         Activity a = activityRepository.findById(activityId)
                 .orElseThrow(()->new ResourceNotFoundException("Activity", "id", activityId));
         int attendees = a.getAttendeesRightNow();
@@ -42,5 +43,4 @@ public class ActivityController {
         activityRepository.save(a);
         return a;
     }
-*/
 }
