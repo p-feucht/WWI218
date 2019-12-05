@@ -1,5 +1,7 @@
 package com.freizeitfinder.freizeitfinderserver.model;
 
+import org.thymeleaf.util.StringUtils;
+
 import javax.persistence.*;
 
 @Entity
@@ -94,6 +96,9 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setName(String name) {
+        if(StringUtils.isEmpty(name)){
+            name = null;
+        }
         this.name = name;
     }
 

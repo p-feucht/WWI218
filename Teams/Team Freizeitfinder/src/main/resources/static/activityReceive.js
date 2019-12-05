@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const getRequest = new XMLHttpRequest();
-    getRequest.open('GET', 'api/activities');
+    getRequest.open('GET', 'api/generalActivities');
     getRequest.onload = function () {
         const answer = getRequest.response;
         const jsonObj = $.parseJSON(answer);
@@ -11,19 +11,17 @@ $(document).ready(function () {
                     <div class="card bg-light mt-3" style="width: 35rem;">
                       <div class="card-header">
                       <div class="float-left pt-2">
-                        Teilnehmer: ${elem.attendeesRightNow}/${elem.attendeesTotal}
+                       <h2> ${elem.name}</h2>
                       </div>
-                      <div class="float-right">
-                        <button class="btn btn-secondary attend" id="${elem.id}"  " onclick="myfunction(this)">Teilnehmen</button>
+                     <div class="float-right">
+                        <h3>ID: ${elem.id}</h3>
                       </div>
                       </div>
                       <div class="card-body">
-         
-                        <h5 class="card-title">Titel</h5>
                         <p class="card-text">${elem.description}</p>
                         <hr>
-                        <p><a>Datum: ${elem.startTime.split(/ (.+)/)[0]}</a>
-                        <p><a>Von ${elem.startTime.split(/ (.+)/)[1]} bis ${elem.endTime} </a></p>
+                        <p>Ort: ${elem.cityName}</p>
+                        <p><a>Öffnungszeiten: ${elem.openingHoursStart.split(/ (.+)/)[1]} - ${elem.openingHoursEnd} </a></p>
                       </div>
                     </div>
                   
@@ -33,11 +31,4 @@ $(document).ready(function () {
 
     };
     getRequest.send();
-
-    const attendButtons = document.getElementsByClassName("btn btn-secondary attend");
-    console.log(attendButtons);
-
-    for (let i = 0; i<attendButtons.length; i++){
-        console.log(attendButtons[i]);
-    }
 });
