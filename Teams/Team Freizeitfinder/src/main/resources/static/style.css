@@ -68,15 +68,17 @@
 }
 
 .wrapper header.header .header-carousal .owl-prev {
+    padding-left:20px;
     left: 0;
     position: absolute;
-    top: 70px;
+    top: 250px;
 }
 
 .wrapper header.header .header-carousal .owl-next {
+    padding-left: 20px;
     right: 0;
     position: absolute;
-    top: 70px;
+    top: 250px;
 }
 
 .wrapper header.header .header-carousal .owl-next i,

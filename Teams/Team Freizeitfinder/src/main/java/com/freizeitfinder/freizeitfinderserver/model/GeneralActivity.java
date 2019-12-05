@@ -102,7 +102,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setActivityStart(String activityStart) {
-        this.activityStart = activityStart;
+        this.activityStart = "12";
     }
 
     public String getActivityEnd() {
@@ -110,7 +110,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setActivityEnd(String activityEnd) {
-        this.activityEnd = activityEnd;
+        this.activityEnd = "12";
     }
 
     public String getDescription() {
@@ -142,7 +142,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setStreet(String street) {
-        this.street = street;
+        this.street = "street";
     }
 
     public String getCityName() {
@@ -158,7 +158,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setPostcode(int postcode) {
-        this.postcode = postcode;
+        this.postcode = 0;
     }
 
     public int getGame() {

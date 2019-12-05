@@ -37,12 +37,12 @@ public class Activity extends BaseModel implements Serializable {
             nullable = false)
     //@Temporal(TemporalType.TIMESTAMP)
     private String endTime;
-/*
+
     @Column(name = "duration",
             columnDefinition = "decimal(2)",
             nullable = false)
     private int duration;
-*/
+
     @Column(name = "attendees_total",
             columnDefinition = "decimal(3)")
     private int attendeesTotal;
@@ -99,15 +99,15 @@ public class Activity extends BaseModel implements Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
-    /*
+
        public int getDuration() {
            return duration;
        }
 
        public void setDuration(int duration) {
-           this.duration = duration;
+           this.duration = 2;
        }
-       */
+
            public int getAttendeesTotal() {
                return attendeesTotal;
            }
