@@ -322,7 +322,7 @@
                                     }
                                     
                                     .block1 {
-                                        padding-left: 1em;
+                                        padding-left: 0.5em;
                                         border-radius: 1em;
                                         padding-top: 1em;
                                         background-color: white;
@@ -331,7 +331,7 @@
                                     }
                                     
                                     .block2 {
-                                        border-radius: 0.5em;
+                                        border-radius: 1em;
                                         margin-left: 1em;
                                         margin-right: 1em;
                                         margin-top: 1em;
