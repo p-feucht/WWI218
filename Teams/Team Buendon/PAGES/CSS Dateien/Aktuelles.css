@@ -234,7 +234,8 @@ ul.breadcrumb li a:hover {
     text-align: left;
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
 }
 
 .block2 {
@@ -247,7 +248,8 @@ ul.breadcrumb li a:hover {
     text-align: left;
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
 }
 
 .block3 {
@@ -260,7 +262,8 @@ ul.breadcrumb li a:hover {
     text-align: left;
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
 }
 
 .block4 {
@@ -273,7 +276,8 @@ ul.breadcrumb li a:hover {
     text-align: left;
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
 }
 
 
