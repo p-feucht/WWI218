@@ -303,6 +303,7 @@
                                         background-color: rgba(134, 215, 3, 0.6);
                                         padding-right: 2%;
                                         padding-left: 2%;
+                                        padding-bottom: 1em;
                                     }
                                     /*block*/
                                     
@@ -322,12 +323,17 @@
                                     }
                                     
                                     .block1 {
+<<<<<<< HEAD
+                                        padding-left: 2em;
+=======
                                         padding-left: 0.5em;
+>>>>>>> 119459f3c779ab981257f363944ec07f4f778e0a
                                         border-radius: 1em;
                                         padding-top: 1em;
                                         background-color: white;
                                         height: fit-content;
-                                        margin-bottom: 20em;
+                                        margin-bottom: 23em;
+                                        width: fit-content;
                                     }
                                     
                                     .block2 {
@@ -338,6 +344,7 @@
                                         text-align: center;
                                         background-color: white;
                                         height: fit-content;
+                                        padding-bottom: 1em;
                                     }
                                     /***************************************/
                                     /*footer*/
