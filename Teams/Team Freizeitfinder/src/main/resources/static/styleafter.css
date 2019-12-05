@@ -221,10 +221,9 @@ input:checked[type="checkbox"]:before {
     margin-right: 5%;
     margin-left: 10%;
     margin-top: 2%;
-    width: 90%;
+    width: 80%;
     height: 350px;
     background: #f1f1f1;
-    box-shadow: 2, 2 black;
     border-radius: 50px;
     display: inline-block;
 }
@@ -249,4 +248,9 @@ input:checked[type="checkbox"]:before {
 
 #ortsearch {
     width: 50%;
+}
+
+.description{
+
+    height: 220px;
 }

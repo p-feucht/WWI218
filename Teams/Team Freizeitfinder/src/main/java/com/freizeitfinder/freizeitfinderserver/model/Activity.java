@@ -42,7 +42,7 @@ public class Activity extends BaseModel implements Serializable {
             columnDefinition = "decimal(2)",
             nullable = false)
     private int duration;
-
+*/
     @Column(name = "attendees_total",
             columnDefinition = "decimal(3)")
     private int attendeesTotal;
@@ -51,11 +51,11 @@ public class Activity extends BaseModel implements Serializable {
             columnDefinition = "decimal(3)",
             nullable = false)
     private int attendeesRightNow;
-
-    @Column(name = "tel_number",
-            columnDefinition = "bigint(20)")
-    private long telNumber;
-*/
+    /*
+        @Column(name = "tel_number",
+                columnDefinition = "bigint(20)")
+        private long telNumber;
+    */
     @Column(name = "e_mail",
             columnDefinition = "varchar(50)")
     private String eMailAdress;
@@ -99,39 +99,40 @@ public class Activity extends BaseModel implements Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
-/*
-    public int getDuration() {
-        return duration;
-    }
+    /*
+       public int getDuration() {
+           return duration;
+       }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
+       public void setDuration(int duration) {
+           this.duration = duration;
+       }
+       */
+           public int getAttendeesTotal() {
+               return attendeesTotal;
+           }
 
-    public int getAttendeesTotal() {
-        return attendeesTotal;
-    }
+        public void setAttendeesTotal(int attendeesTotal) {
+            this.attendeesTotal = attendeesTotal;
+            setAttendeesRightNow(0);
+        }
 
-    public void setAttendeesTotal(int attendeesTotal) {
-        this.attendeesTotal = attendeesTotal;
-    }
+       public int getAttendeesRightNow() {
+           return attendeesRightNow;
+       }
 
-    public int getAttendeesRightNow() {
-        return attendeesRightNow;
-    }
+       public void setAttendeesRightNow(int attendeesRightNow) {
+           this.attendeesRightNow = attendeesRightNow;
+       }
+    /*
+          public long getTelNumber() {
+              return telNumber;
+          }
 
-    public void setAttendeesRightNow(int attendeesRightNow) {
-        this.attendeesRightNow = attendeesRightNow;
-    }
-
-    public long getTelNumber() {
-        return telNumber;
-    }
-
-    public void setTelNumber(long telNumber) {
-        this.telNumber = telNumber;
-    }
-*/
+          public void setTelNumber(long telNumber) {
+              this.telNumber = telNumber;
+          }
+      */
     public String geteMailAdress() {
         return eMailAdress;
     }
