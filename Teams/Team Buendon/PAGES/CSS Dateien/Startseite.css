@@ -323,7 +323,11 @@
                                     }
                                     
                                     .block1 {
+<<<<<<< HEAD
                                         padding-left: 2em;
+=======
+                                        padding-left: 0.5em;
+>>>>>>> 119459f3c779ab981257f363944ec07f4f778e0a
                                         border-radius: 1em;
                                         padding-top: 1em;
                                         background-color: white;

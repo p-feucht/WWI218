@@ -177,7 +177,7 @@ ul.breadcrumb {
     position: -webkit-sticky;
     position: sticky;
     top: 3.5em;
-    width: 10%;
+    width: 12%;
     border-radius: 1em;
     list-style: none;
     background-color: rgba(240, 164, 154, 0.5);
@@ -217,19 +217,28 @@ ul.breadcrumb li a:hover {
 }
 
 .main {
-    background-color: gray;
-}
-
-.main h7 {
-    padding-left: 20px;
+    background-color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .block {
-    background-color: white;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
     border-radius: 1em;
+    background-color: white;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+}
+
+h1 {
+    font-size: 2.5em;
 }
 
 
