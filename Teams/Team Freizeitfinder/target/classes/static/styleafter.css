@@ -251,6 +251,10 @@ input:checked[type="checkbox"]:before {
 }
 
 .description{
-
     height: 220px;
+}
+
+.btn.btn-secondary.attend{
+    background:#ED6B86;
+    border: none;
 }

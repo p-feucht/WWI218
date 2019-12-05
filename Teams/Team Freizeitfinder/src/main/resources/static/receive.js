@@ -14,7 +14,7 @@ $(document).ready(function () {
                         Teilnehmer: ${elem.attendeesRightNow}/${elem.attendeesTotal}
                       </div>
                       <div class="float-right">
-                        <button class="btn btn-secondary attend" id="${elem.id}" onclick="myfunction(this)">Teilnehmen</button>
+                        <button class="btn btn-secondary attend" id="${elem.id}"  " onclick="myfunction(this)">Teilnehmen</button>
                       </div>
                       </div>
                       <div class="card-body">
