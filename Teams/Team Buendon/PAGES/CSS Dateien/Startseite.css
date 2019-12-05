@@ -303,6 +303,7 @@
                                         background-color: rgba(134, 215, 3, 0.6);
                                         padding-right: 2%;
                                         padding-left: 2%;
+                                        padding-bottom: 1em;
                                     }
                                     /*block*/
                                     
@@ -322,22 +323,24 @@
                                     }
                                     
                                     .block1 {
-                                        padding-left: 1em;
+                                        padding-left: 2em;
                                         border-radius: 1em;
                                         padding-top: 1em;
                                         background-color: white;
                                         height: fit-content;
-                                        margin-bottom: 20em;
+                                        margin-bottom: 23em;
+                                        width: fit-content;
                                     }
                                     
                                     .block2 {
-                                        border-radius: 0.5em;
+                                        border-radius: 1em;
                                         margin-left: 1em;
                                         margin-right: 1em;
                                         margin-top: 1em;
                                         text-align: center;
                                         background-color: white;
                                         height: fit-content;
+                                        padding-bottom: 1em;
                                     }
                                     /***************************************/
                                     /*footer*/
