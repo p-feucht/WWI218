@@ -25,7 +25,7 @@ head>
             </div>
 
             <div class="header_subtext">
-                <h2>- Regestrierung -</h2>
+                <h2>- Registrierung -</h2>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@ head>
             <button type="submit" class="btn" name="reg_user">Register</button>
 
             <p>
-                Already a member? <a href="login.html">Sign in</a>
+                Already a member? <a href="login.php">Sign in</a>
             </p>
         </form>
     </div>
