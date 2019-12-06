@@ -85,7 +85,6 @@ head>
                 <input type="password" name="password_2">
 
 
-<<<<<<< HEAD
                 <button type="submit" class="btn" name="reg_user">Register</button>
 
                 <p>
@@ -93,12 +92,6 @@ head>
                 </p>
             </form>
         </div>
-=======
-            <p>
-                Already a member? <a href="login.php">Sign in</a>
-            </p>
-        </form>
->>>>>>> 89c7e91333c8ad15b2b47f733ab3d801b875b9d8
     </div>
 
 
