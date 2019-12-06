@@ -1,9 +1,9 @@
-<?php include ('server.php') ?>
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
 
-
-<title>buendon | Impressum</title>
+<head>
+<title>buendon | Anmeldung</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS Dateien/Anmeldung.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,26 +60,31 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="login.php">Anmeldung</a></li>
     </ul>
+    <form method="post" action="login.php">
+        <?php include('errors.php'); ?>
+
+
+
 
     <div class="row">
         <div class="main">
             <h2> Login </h2>
-            <form method="login.php" class="container">
-                <?php include('errors.php'); ?>
+              <div class="container">
+
 
                 <label for="Username"><p>Username</p></label>
-                <input type="text" placeholder="username" name="Username" required>
-
+                <input type="text"  name="username" required>
                 <label for="Password"><p>Password</p></label>
-                <input type="password" placeholder="password" name="psw" required>
+                <input type="password"  name="password" required>
 
                 <button type="submit" class="btn" name="login_user">Login</button>
                 <p>
                     Not yet a member? <a href="register.php">Sign up</a>
                 </p>
-            </form>
+
         </div>
     </div>
+  </div>
 
 
 
