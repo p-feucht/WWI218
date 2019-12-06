@@ -61,6 +61,7 @@
     </ul>
 
     <div class="row">
+        <div class="main">
         <h2> Login </h2>
         <img src="Bilder/Natur2.jpg" alt="Natur">
         <form method="login.php" class="container">
@@ -74,9 +75,10 @@
                 Not yet a member? <a href="register.php">Sign up</a>
             </p>
         </form>
+    </div>
+    </div>
 
-    </div>
-    </div>
+
 
     <div class="footer ">
         <div class="inner_footer ">
