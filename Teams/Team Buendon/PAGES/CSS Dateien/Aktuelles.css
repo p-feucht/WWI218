@@ -222,12 +222,19 @@ ul.breadcrumb li a:hover {
     padding-bottom: 1em;
     padding-left: 1em;
     padding-right: 1em;
+    background-image: url("Bilder/WWF_Banner.png");
+}
+
+.block1 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
 }
 
 .block1 {
-    border: 0.2em solid rgba(255, 236, 1, 0.5);
-    border-radius: 2em;
-    background-color: white;
+    border-radius: 1em;
+    background-color: rgba(241, 226, 12, 0.2);
     margin-left: 2em;
     margin-right: 2em;
     margin-top: 1em;
@@ -237,11 +244,35 @@ ul.breadcrumb li a:hover {
     padding-right: 2em;
     padding-top: 0.5em;
     padding-bottom: 1em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin: 0.1em;
+}
+
+h4:hover {
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 3em;
+    color: black;
 }
 
 .block2 {
     border-radius: 1em;
-    background-color: rgba(1, 86, 57, 0.2);
+    background-color: rgba(72, 209, 60, 0.2);
     margin-left: 2em;
     margin-right: 2em;
     margin-top: 1em;
@@ -253,9 +284,16 @@ ul.breadcrumb li a:hover {
     padding-bottom: 1em;
 }
 
+.block2 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
+}
+
 .block3 {
     border-radius: 1em;
-    background-color: rgba(0, 114, 206, 0.2);
+    background-color: rgba(66, 165, 247, 0.2);
     margin-left: 2em;
     margin-right: 2em;
     margin-top: 1em;
@@ -265,6 +303,13 @@ ul.breadcrumb li a:hover {
     padding-right: 2em;
     padding-top: 0.5em;
     padding-bottom: 1em;
+}
+
+.block3 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
 }
 
 .block4 {
@@ -281,8 +326,12 @@ ul.breadcrumb li a:hover {
     padding-bottom: 1em;
 }
 
-
-/*#84bb55; Sos-Kinderdorf Farbe*/
+.block4 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
+}
 
 
 /***************************************/

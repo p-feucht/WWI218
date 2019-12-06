@@ -1,0 +1,399 @@
+.navbar.navbar-dark.navbar-expand-md.fixed-top.bg-dark {
+  background-color: #aebdc2!important;
+  opacity: 0.8;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 15px;
+}
+
+.dualstudyfit-logo {
+  height: 48px;
+  line-height: 0;
+  margin: 0;
+}
+
+body {
+  padding-top: 55px;
+}
+
+.presentation {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 576px) {
+  .presentation {
+    padding-top: 100px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.presentation h2 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .presentation h2 {
+    font-size: 27px;
+    font-weight: 400;
+  }
+}
+
+.presentation h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .presentation h1 {
+    font-size: 56px;
+    font-weight: bold;
+  }
+}
+
+.presentation .links {
+  font-size: 21px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 576px) {
+  .presentation .links {
+    font-size: 21px;
+    margin-bottom: 80px;
+  }
+}
+
+.presentation.allocator .links .mehrerfahren {
+  margin-right: 20px;
+}
+
+.presentation.dualesStudium {
+  background-color: #f3edec;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  font-size: 21px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.presentation.allocator {
+  background-color: #ff9103;
+}
+
+.presentation.bewerbung {
+  background-color: #c9d1d3;
+}
+
+.presentation.dark {
+  color: white;
+}
+
+.presentation.dark a {
+  color: white;
+}
+
+.presentation .links.small-link-margin {
+  margin-bottom: 0;
+}
+
+.brands {
+  margin-bottom: 10px;
+}
+
+.acnlogo {
+  height: 30px;
+  filter: brightness(0);
+}
+
+.blblogo {
+  height: 30px;
+  filter: brightness(0);
+}
+
+.saplogo {
+  height: 40px;
+  filter: brightness(0);
+}
+
+.airlogo {
+  height: 30px;
+  filter: brightness(0);
+}
+
+.boschlogo {
+  height: 30px;
+  filter: brightness(0);
+}
+
+.adaclogo {
+  height: 40px;
+  filter: brightness(0);
+}
+
+.brands {
+  background-color: #9cadb6;
+}
+
+.ubersicht-small {
+  height: 550px;
+  padding-top: 40px;
+  margin: 0 0 10px 0;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ubersicht-small.dark h3 {
+  color: rgb(255,255,255);
+}
+
+.ubersicht-small.dark h4 {
+  color: rgb(255,255,255);
+}
+
+@media (min-width: 576px) {
+  .ubersicht-small {
+    margin: 0 0 10px 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.ubersicht-small h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ubersicht-small h4 {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.ubersicht-small.unternehmen {
+  padding-top: 420px;
+}
+
+.row.no-gutters.ubersicht-grid {
+  padding-right: 0;
+}
+
+@media (min-width: 576px) {
+  .row.no-gutters.ubersicht-grid {
+    padding-right: 10px;
+  }
+}
+
+.questionnaire {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.presentation.dualesStudium.allocator {
+  padding-bottom: 0;
+  background-color: #ffffff;
+}
+
+.ubersicht-small.start {
+  padding-top: 210px;
+  background-color: #ffffff;
+}
+
+.top.allocator {
+  height: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+}
+
+.top.hochschule {
+  height: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+}
+
+.col.col-ort {
+  padding-top: 6px;
+}
+
+.col.col-start {
+  padding-top: 6px;
+}
+
+.but-fit-me {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form-label {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.top-login {
+  padding-left: 20%;
+  padding-top: 40px;
+  padding-right: 20%;
+  padding-bottom: 20px;
+}
+
+.top-result {
+  padding-left: 15%;
+  padding-top: 40px;
+  padding-right: 15%;
+  padding-bottom: 20px;
+}
+
+.bottom-result {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 100px;
+}
+
+.bottom-result-more {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
+}
+
+.btn.btn-outline-primary.btn-block.login {
+  width: 245px;
+}
+
+.h1, h1.login-header {
+  padding-bottom: 40px;
+}
+
+.form-group.but-login {
+  padding-top: 40px;
+}
+
+.page-footer.login {
+  margin-top: 200px;
+}
+
+.col-form-label.geschlecht {
+  font-size: 20px;
+  font-weight: 400;
+  color: #757575;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.form-check-label.geschlecht {
+  font-size: 20px;
+  font-weight: 400;
+  color: #757575;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.col-form-label.gebdat {
+  font-size: 20px;
+  font-weight: 400;
+  color: #757575;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 15px;
+}
+
+.col-8.gebdat {
+  position: absolute;
+  padding-left: 320px;
+}
+
+.row.geschlecht {
+  width: 650px;
+}
+
+.col-6.col-nachname {
+  position: absolute;
+  margin-left: 320px;
+}
+
+.form-check-label.nutzung {
+  font-size: 20px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.search-ubersicht {
+  text-align: center;
+}
+
+.col-form-label.search-ubersicht {
+  font-size: 20px;
+  font-weight: 400;
+  color: #797979;
+}
+
+.row.search-ubersicht {
+  width: 475px;
+  margin-left: 30%;
+}
+
+.ubersicht-format {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.h1, h1.hochschul-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hochschul-description {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.hochschul-sektion {
+  margin-bottom: 250px;
+}
+
+.col.my-top {
+  padding-right: 13px;
+  border-right: 1px solid #e5e5e5;
+  margin: 0;
+  margin-right: 13px;
+}
+
+.col.my-top:last-child {
+  border-right: none;
+}
+
+.mehrerfahren.dark {
+  color: white;
+}
+
+.btn.btn-outline-primary.btn-lg.dark {
+  border-color: white;
+}
+
+.btn.btn-outline-primary.btn-lg.dark:hover {
+  background-color: white;
+  color: black;
+}
+
+.row.search-result {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-4.description {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+

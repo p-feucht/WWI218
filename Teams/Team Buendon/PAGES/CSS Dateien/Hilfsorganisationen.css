@@ -240,6 +240,10 @@ ul.breadcrumb li a:hover {
     text-align: center;
 }
 
+.block1 a:hover {
+    font-size: 1.5em;
+}
+
 .block2 {
     border-radius: 1em;
     background-color: white;
