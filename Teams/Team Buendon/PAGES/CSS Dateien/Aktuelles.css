@@ -222,6 +222,14 @@ ul.breadcrumb li a:hover {
     padding-bottom: 1em;
     padding-left: 1em;
     padding-right: 1em;
+    background-image: url("Bilder/WWF_Banner.png");
+}
+
+.block1 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
 }
 
 .block1 {
@@ -236,7 +244,6 @@ ul.breadcrumb li a:hover {
     padding-right: 2em;
     padding-top: 0.5em;
     padding-bottom: 1em;
-    background-image: url("Bilder/Amnesyty_Internationa_Banner.png");
 }
 
 a {
@@ -277,6 +284,13 @@ p {
     padding-bottom: 1em;
 }
 
+.block2 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
+}
+
 .block3 {
     border-radius: 1em;
     background-color: rgba(66, 165, 247, 0.2);
@@ -289,6 +303,13 @@ p {
     padding-right: 2em;
     padding-top: 0.5em;
     padding-bottom: 1em;
+}
+
+.block3 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
 }
 
 .block4 {
@@ -305,8 +326,12 @@ p {
     padding-bottom: 1em;
 }
 
-
-/*#84bb55; Sos-Kinderdorf Farbe*/
+.block4 img {
+    position: absolute;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
+}
 
 
 /***************************************/
