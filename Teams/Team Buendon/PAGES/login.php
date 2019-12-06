@@ -28,23 +28,23 @@
   </div>
 
 
-  <ul class="navList">
-        <li> <a href="index.html"><i class="fa fa-home"></i></a></li>
+   <ul class="navList">
+        <li> <a class="active" href="index.html"><i class="fa fa-home"></i></a></li>
         <li> <a href="Aktuelles.html">Aktuelles</a></li>
-        <li> <a href="Überuns.html">Über uns</a></li>
+        <li> <a href="Ueberuns.html">Über uns</a></li>
 
-        <li><a  href="#hilfsorga">Hilfsorganisationen <i class="fa fa-caret-down"></i></a>
+        <li><a href="#hilfsorga">Hilfsorganisationen <i class="fa fa-caret-down"></i></a>
             <div>
-                <a href="SOS Kinderdorf.html">SOS-Kinderdorf</a>
+                <a href="SOS_Kinderdorf.html">SOS-Kinderdorf</a>
                 <a href="WWF.html">WWF</a>
-                <a href="Plan International.html">Plan International</a>
-                <a href="Amnesty International.html">Amnesty International</a>
+                <a href="Plan_International.html">Plan International</a>
+                <a href="Amnesty_International.html">Amnesty International</a>
                 <a href="Greenpeace.html">Greenpeace</a>
-                <a href="Ärzte ohne Grenzen.html">Ärzte ohne Grenzen</a>
+                <a href="Aerzte_ohne_Grenzen.html">Ärzte ohne Grenzen</a>
             </div>
         </li>
         <li>
-            <a class="active" class="color" href="register.php">Anmeldung</a>
+            <a class="color" href="login.php">Anmeldung</a>
         </li>
         <div class="search">
             <form>
