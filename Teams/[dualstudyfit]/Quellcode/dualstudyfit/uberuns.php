@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html>
+<?php session_start();
+include ("header.php"); ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>dualstudyfit</title>
-    <link rel="icon" type="image/png" sizes="1920x1920" href="assets/img/fit_favicon.png">
-    <link rel="icon" type="image/png" sizes="1920x1920" href="assets/img/fit_favicon.png">
-    <link rel="icon" type="image/png" sizes="1920x1920" href="assets/img/fit_favicon.png">
-    <link rel="icon" type="image/png" sizes="1920x1920" href="assets/img/fit_favicon.png">
-    <link rel="icon" type="image/png" sizes="1920x1920" href="assets/img/fit_favicon.png">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Brands.css">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/Corporate-Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Features-Clean.css">
-    <link rel="stylesheet" href="assets/css/Form-Select---Full-Date---Month-Day-Year.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark" style="background-color: rgb(174,189,194);padding-top: 4px;padding-bottom: 4px;">
-        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav flex-grow-1 justify-content-between">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.html" style="padding: 0;"><img class="dualstudyfit-logo" src="assets/img/dualstudyfit_logo.png"></a></li>
-                    <li class="nav-item d-lg-flex align-items-lg-center" role="presentation"><a class="nav-link" href="../allocator.html">Dual Study Allocator</a></li>
-                    <li class="nav-item d-lg-flex align-items-lg-center" role="presentation"><a class="nav-link" href="studiengänge.html">Studiengänge</a></li>
-                    <li class="nav-item d-lg-flex align-items-lg-center" role="presentation"><a class="nav-link" href="unternehmen.html">Unternehmen</a></li>
-                    <li class="nav-item d-lg-flex align-items-lg-center" role="presentation"><a class="nav-link" href="hochschulen.html">Hochschulen</a></li>
-                    <li class="nav-item d-lg-flex align-items-lg-center" role="presentation"><a class="nav-link d-xl-flex align-items-xl-center" href="../Custom_Pages/login.html"><i class="fa fa-sign-in" style="font-size: 17px;"></i>&nbsp;Login</a></li>
-                    <li class="nav-item d-lg-flex align-items-lg-center" role="presentation"><a class="nav-link" href="../Custom_Pages/signup.html"><i class="icon-note"></i>&nbsp;Sign Up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <section>
         <div class="top-login">
             <h1 class="login-header">Über uns.</h1>
@@ -70,10 +29,12 @@
             </div>
             <div class="row" style="margin-bottom: 20px;">
                 <div class="col" style="background-color: #f5f5f5;margin-right: 10px;padding-right: 15px;width: 297.406px;">
-                    <p>Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    <p>Der Allocator hilft unentschlossenen Bewerbern sich einen Überblick über die
+                        bestehenden Möglichkeiten zu informieren.</p>
                 </div>
                 <div class="col" style="margin-left: 10px;background-color: #f5f5f5;width: 297.406;">
-                    <p>Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    <p>Partnerunternehmen, die ein duales Studium anbieten, werden übersichtlich präsentiert,
+                        sodass Interessenten sich über potentielle Arbeitgeber informieren können.</p>
                 </div>
             </div>
             <div class="row d-lg-flex align-items-lg-center" style="margin-right: -15px;margin-left: -15px;">
@@ -96,10 +57,12 @@
             </div>
             <div class="row" style="margin-bottom: 20px;">
                 <div class="col" style="margin-right: 10px;background-color: #f5f5f5;">
-                    <p>Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    <p>Die Bewerbungshilfe unterstützt die Bewerber beim Bewerbungsprozess mit den jeweiligen Partnerunternehmen.
+                        Durch Absprache mit den Unternehmen wird gewährleistet, dass die Templates den Anforderungen der Personalabteilungen entsprechen.</p>
                 </div>
                 <div class="col" style="margin-left: 10px;background-color: #f5f5f5;">
-                    <p>Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    <p>In einer kurzen Übersicht werden den Interessenten die Studiengänge mit den entsprechenden Inhalten
+                        präsentiert.</p>
                 </div>
             </div>
             <div class="row d-lg-flex align-items-lg-center">
@@ -122,10 +85,10 @@
             </div>
             <div class="row">
                 <div class="col" style="background-color: #f5f5f5;margin-right: 10px;">
-                    <p>Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    <p>In dieser Übersicht werden die Vertiefungen der Studiengänge anhand hochschulspezifischer Unterschiede aufgeführt.</p>
                 </div>
                 <div class="col" style="margin-left: 10px;background-color: #f5f5f5;">
-                    <p>Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    <p>In dieser Übersicht werden die Vertiefungen der Studiengänge anhand hochschulspezifischer Unterschiede aufgeführt.</p>
                 </div>
             </div>
         </div>
@@ -133,7 +96,8 @@
     <div class="top-login">
         <p>Wir wünschen Ihnen viel Erfolg mit unseren Features und möglicherweise im dualen Studium.</p>
         <h3 style="font-size: 26px;"><strong>Partnerunternehmen</strong></h3>
-        <p>Sollten Sie als Partnerunternehmen auf dieser Website vertreten sein wollen, treten Sie gerne über das nachfolgende Kontaktformular mit uns in Kontakt:</p>
+        <p>Hier werden neutral die Vor- und Nachteile eines dualen Studiums gegenüber einem klassischen Studium erläutert.
+            Neben der Vermittlung eines Ausbildungsvertrags und Studienplatzes dient die Website auch als Informationsquelle.</p>
     </div>
     <div class="shadow-none contact-clean" style="background-color: rgba(241,247,252,0);padding-top: 0px;">
         <form class="border rounded border-primary shadow-none" data-bss-recipient="91765a22e6077b70759c2617b16afb76" data-bss-subject="Kontakt">
@@ -144,38 +108,7 @@
             <div class="form-group d-lg-flex justify-content-lg-center align-items-lg-center"><button class="btn btn-outline-primary btn-block login" type="submit" style="width: 200px;height: 50px;font-size: 20px;">Senden</button></div>
         </form>
     </div>
-    <footer class="page-footer">
-        <div class="container">
-            <hr style="background-color: #ffffff;">
-            <div class="footer-legal">
-                <div class="d-inline-block copyright">
-                    <p class="d-inline-block">Copyright © 2019 dual study fit. All rights reserved.<br></p>
-                </div>
-                <div class="d-inline-block legal-links">
-                    <div class="d-inline-block item">
-                        <a href="uberuns.html">
-                            <h5 style="color: rgb(33,37,48);">Über uns</h5>
-                        </a>
-                    </div>
-                    <div class="d-inline-block item">
-                        <a href="impressum.html" style="color: rgb(33,37,48);font-size: 11px;">
-                            <h5>Impressum</h5>
-                        </a>
-                    </div>
-                    <div class="d-inline-block item">
-                        <a href="datenschutzerklärung.html">
-                            <h5 style="color: rgb(33,37,48);">Datenschutzerklärung</h5>
-                        </a>
-                    </div>
-                    <div class="d-inline-block item">
-                        <a href="nutzungsbedingungen.html">
-                            <h5 style="color: rgb(33,37,48);">Nutzungsbedingungen</h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+<?php include ("footer.php"); ?>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/smart-forms.min.js"></script>

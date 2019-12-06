@@ -75,7 +75,7 @@ body {
 }
 
 .presentation.dualesStudium {
-  background-color: #f5f5f5;
+  background-color: #f3edec;
 }
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
@@ -87,11 +87,11 @@ body {
 }
 
 .presentation.allocator {
-  background-color: #e3e8ee;
+  background-color: #ff9103;
 }
 
 .presentation.bewerbung {
-  background-color: #ffffff;
+  background-color: #c9d1d3;
 }
 
 .presentation.dark {
@@ -151,6 +151,14 @@ body {
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.ubersicht-small.dark h3 {
+  color: rgb(255,255,255);
+}
+
+.ubersicht-small.dark h4 {
+  color: rgb(255,255,255);
 }
 
 @media (min-width: 576px) {
@@ -238,6 +246,25 @@ body {
   padding-top: 40px;
   padding-right: 20%;
   padding-bottom: 20px;
+}
+
+.top-result {
+  padding-left: 15%;
+  padding-top: 40px;
+  padding-right: 15%;
+  padding-bottom: 20px;
+}
+
+.bottom-result {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 100px;
+}
+
+.bottom-result-more {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
 }
 
 .btn.btn-outline-primary.btn-block.login {
@@ -345,5 +372,28 @@ body {
 
 .col.my-top:last-child {
   border-right: none;
+}
+
+.mehrerfahren.dark {
+  color: white;
+}
+
+.btn.btn-outline-primary.btn-lg.dark {
+  border-color: white;
+}
+
+.btn.btn-outline-primary.btn-lg.dark:hover {
+  background-color: white;
+  color: black;
+}
+
+.row.search-result {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-4.description {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 

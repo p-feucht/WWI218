@@ -72,3 +72,9 @@
   }
 }
 
+.h1, h1.score {
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+}
+
