@@ -5,7 +5,7 @@ $(document).ready(function () {
     let societal=0;
     let sport =0;
     let game=0;
-
+    const formdat = document.getElementById('formsubmit');
     const form ={
         description : document.getElementById('description'),
         cityName: document.getElementById('inputCity'),
@@ -39,9 +39,6 @@ $(document).ready(function () {
         } if (categories.f.checked){
             game=1;
         }
-
-        console.log(alcohol);
-
         request.onload = () => {
             console.log(request.responseText);
         };
@@ -50,7 +47,9 @@ $(document).ready(function () {
         console.log(requestData);
         request.open('post', '/api/generalActivities');
         request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        request.send(requestData);
-        location.reload();
+        if(formdat.checkValidity() === true) {
+            request.send(requestData);
+            location.reload();
+        }
     });
 });
