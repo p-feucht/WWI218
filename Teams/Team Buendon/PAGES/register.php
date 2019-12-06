@@ -27,20 +27,31 @@
       </div>
   </div>
 
+ <ul class="navList">
+        <li> <a class="active" href="index.html"><i class="fa fa-home"></i></a></li>
+        <li> <a href="Aktuelles.html">Aktuelles</a></li>
+        <li> <a href="Ueberuns.html">Über uns</a></li>
 
-  <div class="sticky">
-      <a class="house" href="index.html"><i class="fa fa-home"></i></a>
-      <a href="Akutelles.html">Aktuelles</a>
-      <a href="Uberuns.html">Über uns</a>
-      <a href="SOS Kinderdorf.html">Hilfsorganisationen</a>
-      <a class="color" href="register.php">Anmeldung</a>
-      <div class="search">
-          <form>
-              <input type="text" class="searchterm" placeholder="Suche">
-          </form>
-      </div>
-  </div>
-
+        <li><a href="#hilfsorga">Hilfsorganisationen <i class="fa fa-caret-down"></i></a>
+            <div>
+                <a href="SOS_Kinderdorf.html">SOS-Kinderdorf</a>
+                <a href="WWF.html">WWF</a>
+                <a href="Plan_International.html">Plan International</a>
+                <a href="Amnesty_International.html">Amnesty International</a>
+                <a href="Greenpeace.html">Greenpeace</a>
+                <a href="Aerzte_ohne_Grenzen.html">Ärzte ohne Grenzen</a>
+            </div>
+        </li>
+        <li>
+            <a class="color" href="login.php">Anmeldung</a>
+        </li>
+        <div class="search">
+            <form>
+                <input type="text" class="searchterm" placeholder="Suche">
+            </form>
+        </div>
+    </ul>
+  
   <ul class="breadcrumb">
       <li><a href="index.html">Home</a></li>
       <li><a href="Register.php">Registrierung</a></li>
