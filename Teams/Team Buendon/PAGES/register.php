@@ -3,7 +3,7 @@
 <html>
 
 head>
-<title>buendon | Impressum</title>
+<title>buendon | Anmeldung</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS Dateien/Anmeldung.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,7 +88,7 @@ head>
                 <button type="submit" class="btn" name="reg_user">Register</button>
 
                 <p>
-                    Already a member? <a href="login.html">Sign in</a>
+                    Already a member? <a href="login.php">Sign in</a>
                 </p>
             </form>
         </div>
