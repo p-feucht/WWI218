@@ -19,7 +19,7 @@ $(document).ready(function () {
                       </div>
                       <div class="card-body">
          
-                        <h5 class="card-title">Titel</h5>
+                        <h5 class="card-title">${elem.generalActivity.name}</h5>
                         <p class="card-text">${elem.description}</p>
                         <hr>
                         <p><a>Datum: ${elem.startTime.split(/ (.+)/)[0]}</a>
