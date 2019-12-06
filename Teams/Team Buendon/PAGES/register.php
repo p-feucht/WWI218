@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 
-head>
+<head>
 <title>buendon | Anmeldung</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="CSS Dateien/Anmeldung.css">
@@ -58,23 +58,25 @@ head>
 
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a></li>
-        <li><a href="register.php">Regestrierung</a></li>
+        <li><a href="register.php">Registrierung</a></li>
     </ul>
+    <form method="post" action="register.php">
+      <?php include('errors.php'); ?>
     <div class="row">
         <div class="main">
             <h2>Registrierung</h2>
 
 
 
-            <form method="register.php" class="container">
-                <?php include('errors.php'); ?>
+            <div class="container">
+
 
                 <label for="Username"><p>Username</p></label>
-                <input type="text" placeholder="username" value="<?php echo $username; ?>">
+                <input type="text" name="username" value="<?php echo $username; ?>">
 
 
                 <label for="Email"><p>Email</p></label>
-                <input type="email" placeholder="email" value="<?php echo $email; ?>">
+                <input type="email" name="email" value="<?php echo $email; ?>">
 
 
                 <label for="Password"><p>Password</p></label>
@@ -90,7 +92,7 @@ head>
                 <p>
                     Already a member? <a href="login.php">Sign in</a>
                 </p>
-            </form>
+            </div>
         </div>
     </div>
 
