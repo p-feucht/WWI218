@@ -14,11 +14,11 @@ public class Activity extends BaseModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @ManyToOne(fetch = FetchType.LAZY,
+    @ManyToOne(fetch = FetchType.EAGER,
             optional = false)
     @JoinColumn(name = "activity_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    //@JsonIgnore
     private GeneralActivity generalActivity;
 
     @Lob
