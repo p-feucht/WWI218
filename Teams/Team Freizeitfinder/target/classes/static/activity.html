@@ -6,15 +6,21 @@
     <title>Freizeitbörse</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Open+Sans:400,600,700,800"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
     <!-- Place favicon.ico in the root directory -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/moment.min.js"></script>
+    <script src="activityPost.js"></script>
+    <script src="activityReceive.js"></script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css"/>
 
     <link rel="stylesheet" href="styleafter.css">
 
@@ -22,234 +28,267 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="fixed-bottom p-5 ">
-            <button class="neBtn float-right" type="button" data-toggle="modal" data-target="#entryModal">
-                            <k class="plus-sym">
-                                <i class="fas fa-plus " id="pluslogo"></i>
-                            </k>   
-                            Eintrag anlegen
-            </button>
+<div class="container">
+    <div class="fixed-bottom p-5 ">
+        <button class="neBtn float-right" type="button" data-toggle="modal" data-target="#entryModal">
+            <k class="plus-sym">
+                <i class="fas fa-plus " id="pluslogo"></i>
+            </k>
+            Eintrag anlegen
+        </button>
+    </div>
+    <nav class="navbar fixed-top navbar-center pr-5" style="background-color:#888484" id="navigation">
+        <div class="logo">
+            <h2><a>Freizeitfinder</a></h2>
+
         </div>
-        <nav class="navbar fixed-top navbar-center pr-5" style="background-color:#888484" id="navigation">
-            <div class="logo">
-                <h2><a>Freizeitfinder</a></h2>
+        <ul class="nav justify-content-lg-center" id="navcontent">
+            <li class="active">
+                <form action="index.html">
+                    <button type="submit" id="homebutton" style="background: none; border:none; color:white">
+                        <n>Home</n>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="activity.html">
+                    <button type="submit" id="homebutton" style="background: none; border:none; color:white">
+                        <c>Aktivitätenfinder</c>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="boerse.html">
+                    <button type="submit" id="homebutton" style="background: none; border:none; color:white">
+                        <n>Börse</n>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </nav>
 
+
+    <div class="menu">
+        <form>
+            <div class="form-group">
+                <div class="search-box ">
+                    <input type="text " name=" " class="search-txt " placeholder="Type to search "/>
+                    <a class="search-btn " href="# ">
+                        <i class="fas fa-search "></i>
+                    </a>
+                </div>
             </div>
-            <ul class="nav justify-content-lg-center" id="navcontent">
-                <li class="active">
-                    <form action="index.html">
-                        <button type="submit" id="homebutton" style="background: none; border:none; color:white"><n>Home</n></button>
-                    </form>
-                </li>
-                <li>
-                    <form action="activity.html">
-                        <button type="submit" id="homebutton" style="background: none; border:none; color:white"><c>Aktivitätenfinder</c></button>
-                    </form>
-                </li>
-                <li>
-                    <form action="boerse.html">
-                        <button type="submit" id="homebutton" style="background: none; border:none; color:white"><n>Börse</n></button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
+            <div class="form-group">
+                <div class="pt-4">
+                    <div class="filters">
+                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#filters"
+                                aria-expanded="false" aria-controls="filters">Kategorien
+                        </button>
+                        <div class="collapse multi-collapse mt-2" id="filters">
+                            <table class="table table">
+                                <tbody>
+                                <tr>
+                                    <td class="pl-1">
+                                        <input class="pl-1" type="checkbox" data-toggle="toggle">
+                                    </td>
+                                    <td><label class="checklbl ">Draussen</label></td>
+                                    <td>
+                                        <input class="pl-1" type="checkbox" data-toggle="toggle">
+                                    </td>
+                                    <td><label class="checklbl ">Überdacht</label></td>
+                                <tr>
 
-
-
-
-
-        <div class="menu">
-            <form>
-                <div class="form-group">
-                    <div class="search-box ">
-                        <input type="text " name=" " class="search-txt " placeholder="Type to search " />
-                        <a class="search-btn " href="# ">
-                            <i class="fas fa-search "></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="pt-4">
-                        <div class="filters">
-                            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="filters">Kategorien</button>
-                            <div class="collapse multi-collapse mt-2" id="filters">
-                                <table class="table table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="pl-1">
-                                                <input class="pl-1" type="checkbox" data-toggle="toggle">
-                                            </td>
-                                            <td><label class="checklbl ">Draussen</label></td>
-                                            <td>
-                                                <input class="pl-1" type="checkbox" data-toggle="toggle">
-                                            </td>
-                                            <td><label class="checklbl ">Überdacht</label></td>
-                                            <tr>
-
-                                                <td>
-                                                    <input class="pl-1" type="checkbox" data-toggle="toggle">
-                                                </td>
-                                                <td><label class="checklbl ">Gesellschaft</label></td>
-                                                <td>
-                                                    <input class="pl-1" type="checkbox" data-toggle="toggle">
-                                                </td>
-                                                <td><label class="checklbl ">Sport</label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input class="pl-1" type="checkbox" data-toggle="toggle">
-                                                </td>
-                                                <td><label class="checklbl ">Alkohol</label></td>
-                                                <td>
-                                                    <input class="pl-1" type="checkbox" data-toggle="toggle">
-                                                </td>
-                                                <td><label class="checklbl ">Spiele</label></td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    <td>
+                                        <input class="pl-1" type="checkbox" data-toggle="toggle">
+                                    </td>
+                                    <td><label class="checklbl ">Gesellschaft</label></td>
+                                    <td>
+                                        <input class="pl-1" type="checkbox" data-toggle="toggle">
+                                    </td>
+                                    <td><label class="checklbl ">Sport</label></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="pl-1" type="checkbox" data-toggle="toggle">
+                                    </td>
+                                    <td><label class="checklbl ">Alkohol</label></td>
+                                    <td>
+                                        <input class="pl-1" type="checkbox" data-toggle="toggle">
+                                    </td>
+                                    <td><label class="checklbl ">Spiele</label></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="form-group">
-                    <label for="ortsearch">Umgebung
-                    </label>
-                    <div class="pl-5 pr-5">
-                        <input type="text" class="form-control" id="ortsearch" placeholder="Ort" style="width:100%; text-align:center">
-                    </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="ortsearch">Umgebung
+                </label>
+                <div class="pl-5 pr-5">
+                    <input type="text" class="form-control" id="ortsearch" placeholder="Ort"
+                           style="width:100%; text-align:center">
                 </div>
-                <hr>
-                <div class=" ml-3 mr-3">
-                    <div class="form-row">
-                        <div class="col-sm-8">
-                            <div class="form-group">
-                                <label for="datetimepickerfilter1">Von</label>
-                                <div class="input-group date" id="datetimepickerfilter1" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerfilter1" />
-                                    <div class="input-group-append" data-target="#datetimepickerfilter1" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="datetimepicker3">Bis</label>
-                            <div class="input-group date" id="datetimepickerfilter2" data-target-input="nearest" style="color: aquamarine;">
-                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepickerfilter2" />
-                                <div class="input-group-append" data-target="#datetimepickerfilter2" data-toggle="datetimepicker">
+            </div>
+            <hr>
+            <div class=" ml-3 mr-3">
+                <div class="form-row">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label for="datetimepickerfilter1">Von</label>
+                            <div class="input-group date" id="datetimepickerfilter1" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input"
+                                       data-target="#datetimepickerfilter1"/>
+                                <div class="input-group-append" data-target="#datetimepickerfilter1"
+                                     data-toggle="datetimepicker">
                                     <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-4">
+                        <label for="datetimepicker3">Bis</label>
+                        <div class="input-group date" id="datetimepickerfilter2" data-target-input="nearest"
+                             style="color: aquamarine;">
+                            <input type="text" class="form-control datetimepicker-input"
+                                   data-target="#datetimepickerfilter2"/>
+                            <div class="input-group-append" data-target="#datetimepickerfilter2"
+                                 data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr>
-                <button type="submit" class="btn btn-primary btn-lg" style="background: #ED6B86; border:none ">
-                    Submit
-                </button>
-            </form>
-        </div>
-
-        <div class="contentpage ">
-
-            <div class="resultbox ">
-
             </div>
+            <hr>
+            <button type="submit" class="btn btn-primary btn-lg" style="background: #ED6B86; border:none ">
+                Submit
+            </button>
+        </form>
+    </div>
 
-            <div class="resultbox ">
+    <div class="contentpage" id="content">
 
-            </div>
-
-            <div class="resultbox ">
-
-            </div>
-
-            <div class="resultbox ">
-
-            </div>
-
-            <div class="resultbox ">
-
-            </div>
-        </div>
-        <div class="modal fade" id="entryModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form>
-                            <div class="entryform">
-                                <div class="formitems">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6" id="group-1">
-                                            <label for="inputEmail4">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email eingeben..">
-                                        </div>
+    </div>
+    <div class="modal fade" id="entryModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="formsubmit">
+                        <div class="entryform">
+                            <div class="formitems">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6" id="group-1">
+                                        <label for="inputName">Name</label>
+                                        <input type="text" class="form-control" id="inputName"
+                                               placeholder="Name eingeben.." required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Beschreiben</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Stellen Sie sich vor und beschreiben was Sie vorhaben.."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Beschreiben</label>
+                                    <textarea class="form-control" id="description" rows="3"
+                                              placeholder="Stellen Sie sich vor und beschreiben was Sie vorhaben.."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <table class="table table">
+                                        <tbody>
+                                        <tr>
+                                            <td class="pl-1">
+                                                <input class="pl-1" type="checkbox" id="draussen" data-toggle="toggle">
+                                            </td>
+                                            <td><label class="checklbl ">Draussen</label></td>
+                                            <td>
+                                                <input class="pl-1" type="checkbox" id="überdacht" data-toggle="toggle">
+                                            </td>
+                                            <td><label class="checklbl ">Überdacht</label></td>
+                                        <tr>
+
+                                            <td>
+                                                <input class="pl-1" type="checkbox" id="gesellschaft" data-toggle="toggle">
+                                            </td>
+                                            <td><label class="checklbl ">Gesellschaft</label></td>
+                                            <td>
+                                                <input class="pl-1" type="checkbox" id="sport" data-toggle="toggle">
+                                            </td>
+                                            <td><label class="checklbl ">Sport</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="pl-1" type="checkbox" id="alkohol" data-toggle="toggle">
+                                            </td>
+                                            <td><label class="checklbl ">Alkohol</label></td>
+                                            <td>
+                                                <input class="pl-1" type="checkbox" id="spiele" data-toggle="toggle">
+                                            </td>
+                                            <td><label class="checklbl ">Spiele</label></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-8">
+                                        <label for="inputCity">Ort</label>
+                                        <input type="text" class="form-control" id="inputCity"
+                                               placeholder="Aktivität eingeben.." required>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputState">Kapazität</label>
+                                        <input type="text" id="inputState" class="form-control"/>
                                     </div>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-md-8">
-                                            <label for="inputCity">Aktivität</label>
-                                            <input type="text" class="form-control" id="inputCity" placeholder="Aktivität eingeben..">
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputState">Personen</label>
-                                            <select id="inputState" class="form-control">
-                                                                             <option selected>2</option>
-                                                                             <option>2-4</option>
-                                                                             <option>5-9</option>
-                                                                             <option>10-20</option>
-                                                                         </select>
-                                        </div>
-
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="datetimepicker3">Von</label>
-                                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
-                                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" />
-                                                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
-                                                        <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <label for="datetimepicker3">Bis</label>
-                                            <div class="input-group date" id="datetimepicker4" data-target-input="nearest" style="color: aquamarine;">
-                                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" />
-                                                <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="datetimepicker3">Von</label>
+                                            <div class="input-group date" id="datetimepicker3"
+                                                 data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input"
+                                                       id="datefrom" data-target="#datetimepicker3" required/>
+                                                <div class="input-group-append" data-target="#datetimepicker3"
+                                                     data-toggle="datetimepicker">
                                                     <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                                            <label class="form-check-label" for="gridCheck">
-                                                Premium-Eintrag
-                                            </label>
+                                    <div class="col-sm-3">
+                                        <label for="datetimepicker4">Bis</label>
+                                        <div class="input-group date" id="datetimepicker4" data-target-input="nearest"
+                                             style="color: aquamarine;">
+                                            <input type="text" class="form-control datetimepicker-input" id="datetill"
+                                                   data-target="#datetimepicker4"/>
+                                            <div class="input-group-append" data-target="#datetimepicker4"
+                                                 data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" style="background: #ED6B86; border:none ">Erstellen</button>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Premium-Eintrag
+                                        </label>
                                     </div>
                                 </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" id="submitEntry" class="btn btn-primary"
+                                            style="background: #ED6B86; border:none ">Erstellen
+                                    </button>
+                                </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 
@@ -257,33 +296,37 @@
     <script src="https://kit.fontawesome.com/a7251fd168.js " crossorigin="anonymous "></script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 "
+            crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
+            crossorigin="anonymous "></script>
 
 
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $('#datetimepicker3').datetimepicker({
                 locale: 'de'
             });
         });
     </script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $('#datetimepicker4').datetimepicker({
                 format: 'LT'
             });
         });
     </script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $('#datetimepickerfilter1').datetimepicker({
                 locale: 'de'
             });
         });
     </script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $('#datetimepickerfilter2').datetimepicker({
                 format: 'LT'
             });
@@ -295,8 +338,9 @@
             var autocomplete = new google.maps.places.SearchBox(input);
         }
     </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMs4-VhZ0I_kg-bt8_VjO5YB1-4kCD5yQ&libraries=places&callback=activatePlacesSearch"></script>
-    </script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMs4-VhZ0I_kg-bt8_VjO5YB1-4kCD5yQ&libraries=places&callback=activatePlacesSearch"></script>
 </footer>
 
 </html>

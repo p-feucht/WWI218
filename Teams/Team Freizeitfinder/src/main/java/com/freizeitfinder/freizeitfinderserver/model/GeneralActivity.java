@@ -1,7 +1,8 @@
 package com.freizeitfinder.freizeitfinderserver.model;
 
+import org.thymeleaf.util.StringUtils;
+
 import javax.persistence.*;
-import java.sql.Time;
 
 @Entity
 @Table(name = "general_activity")
@@ -9,7 +10,7 @@ public class GeneralActivity extends BaseModel {
 
     //Variables
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "outside",
@@ -42,12 +43,11 @@ public class GeneralActivity extends BaseModel {
     private String name;
 
     @Column(name = "activity_start",
-            columnDefinition = "time",
-            nullable = false)
+            columnDefinition = "varchar(30)")
     private String activityStart;
 
     @Column(name = "activity_end",
-            columnDefinition = "time",
+            columnDefinition = "varchar(30)",
             nullable = false)
     private String activityEnd;
 
@@ -57,12 +57,12 @@ public class GeneralActivity extends BaseModel {
     private String description;
 
     @Column(name = "opening_hours_start",
-            columnDefinition = "time")
-    private Time openingHoursStart;
+            columnDefinition = "varchar(30)")
+    private String openingHoursStart;
 
     @Column(name = "opening_hours_end",
-            columnDefinition = "time")
-    private Time openingHoursEnd;
+            columnDefinition = "varchar(30)")
+    private String openingHoursEnd;
 
     @Column(name = "street",
             columnDefinition = "varchar(50)",
@@ -96,6 +96,9 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setName(String name) {
+        if(StringUtils.isEmpty(name)){
+            name = null;
+        }
         this.name = name;
     }
 
@@ -104,7 +107,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setActivityStart(String activityStart) {
-        this.activityStart = activityStart;
+        this.activityStart = "12";
     }
 
     public String getActivityEnd() {
@@ -112,7 +115,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setActivityEnd(String activityEnd) {
-        this.activityEnd = activityEnd;
+        this.activityEnd = "12";
     }
 
     public String getDescription() {
@@ -123,19 +126,19 @@ public class GeneralActivity extends BaseModel {
         this.description = description;
     }
 
-    public Time getOpeningHoursStart() {
+    public String getOpeningHoursStart() {
         return openingHoursStart;
     }
 
-    public void setOpeningHoursStart(Time openingHoursStart) {
+    public void setOpeningHoursStart(String openingHoursStart) {
         this.openingHoursStart = openingHoursStart;
     }
 
-    public Time getOpeningHoursEnd() {
+    public String getOpeningHoursEnd() {
         return openingHoursEnd;
     }
 
-    public void setOpeningHoursEnd(Time openingHoursEnd) {
+    public void setOpeningHoursEnd(String openingHoursEnd) {
         this.openingHoursEnd = openingHoursEnd;
     }
 
@@ -144,7 +147,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setStreet(String street) {
-        this.street = street;
+        this.street = "street";
     }
 
     public String getCityName() {
@@ -160,7 +163,7 @@ public class GeneralActivity extends BaseModel {
     }
 
     public void setPostcode(int postcode) {
-        this.postcode = postcode;
+        this.postcode = 0;
     }
 
     public int getGame() {
