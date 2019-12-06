@@ -261,10 +261,6 @@ h4 {
     margin: 0.1em;
 }
 
-h4:hover {
-    font-size: 2em;
-}
-
 p {
     margin-bottom: 3em;
     color: black;
