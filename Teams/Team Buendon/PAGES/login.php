@@ -57,26 +57,30 @@
 
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a></li>
-        <li><a href="Anmeldung.php">Anmeldung</a></li>
+        <li><a href="login.php">Anmeldung</a></li>
     </ul>
 
     <div class="row">
         <div class="main">
-        <h2> Login </h2>
-        <img src="Bilder/Natur2.jpg" alt="Natur">
-        <form method="login.php" class="container">
-            <?php include('errors.php'); ?>
-            <label for="Username"><p>Username</p></label>
-            <input type="text " placeholder="username" name="Username" required>
-            <label for="Password"><p>Password</p></label>
-            <input type="password" placeholder="password" name="psw" required>
-            <button type="submit" class="btn" name="login_user">Login</button>
-            <p>
-                Not yet a member? <a href="register.php">Sign up</a>
-            </p>
-        </form>
+            <h2> Login </h2>
+            <form method="login.php" class="container">
+                <?php include('errors.php'); ?>
+
+                <label for="Username"><p>Username</p></label>
+                <input type="text" placeholder="username" name="Username" required>
+
+                <label for="Password"><p>Password</p></label>
+                <input type="password" placeholder="password" name="psw" required>
+
+                <button type="submit" class="btn" name="login_user">Login</button>
+                <p>
+                    Not yet a member? <a href="register.php">Sign up</a>
+                </p>
+            </form>
+        </div>
     </div>
-    </div>
+
+
 
 
 

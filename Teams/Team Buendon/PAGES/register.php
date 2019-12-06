@@ -61,35 +61,37 @@ head>
         <li><a href="register.php">Regestrierung</a></li>
     </ul>
     <div class="row">
-        <h2>Registrierung</h2>
-
-        <img src="Bilder/Natur2.jpg" alt="Natur">
-
-        <form method="register.php" class="container">
-            <?php include('errors.php'); ?>
-
-            <label for="Username"><p>Username</p></label>
-            <input type="text" placeholder="username" value="<?php echo $username; ?>">
+        <div class="main">
+            <h2>Registrierung</h2>
 
 
-            <label for="Email"><p>Email</p></label>
-            <input type="email" placeholder="email" value="<?php echo $email; ?>">
+
+            <form method="register.php" class="container">
+                <?php include('errors.php'); ?>
+
+                <label for="Username"><p>Username</p></label>
+                <input type="text" placeholder="username" value="<?php echo $username; ?>">
 
 
-            <label for="Password"><p>Password</p></label>
-            <input type="password" name="password_1">
+                <label for="Email"><p>Email</p></label>
+                <input type="email" placeholder="email" value="<?php echo $email; ?>">
 
 
-            <label for="Confirm password"><p>Confirm passowrd</p></label>
-            <input type="password" name="password_2">
+                <label for="Password"><p>Password</p></label>
+                <input type="password" name="password_1">
 
 
-            <button type="submit" class="btn" name="reg_user">Register</button>
+                <label for="Confirm password"><p>Confirm passowrd</p></label>
+                <input type="password" name="password_2">
 
-            <p>
-                Already a member? <a href="login.html">Sign in</a>
-            </p>
-        </form>
+
+                <button type="submit" class="btn" name="reg_user">Register</button>
+
+                <p>
+                    Already a member? <a href="login.html">Sign in</a>
+                </p>
+            </form>
+        </div>
     </div>
 
 
