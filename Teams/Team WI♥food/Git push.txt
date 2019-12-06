@@ -1,4 +1,0 @@
-git add ./
-git commit -m "<änderung>"
-(git pull) falls in der Zwischenzeit jemand anders etwas hochgeladen hat
-git push
